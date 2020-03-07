@@ -67,19 +67,19 @@ The `parties` property in the root section contains an array of parties:
 }
 ```
 
-### name
+### parties[].name
 
 The full name of the party, without abbrevations.
 
 Example: `"Super Democratic Party"`
 
-### short
+### parties[].short
 
 The abbrevation or short name of the party, as it is usually used in logos, charts, etc.
 
 Example: `"SCP"`
 
-### alias
+### parties[].alias
 
 The identifier of the party, used for technical purposes. Simply enter the abbrevation of the party
 name in small letters and make sure it is unique (no two parties may have the same identifier). The
@@ -87,7 +87,7 @@ identifier is used in the theses objects to map the positions to the respective 
 
 Example: `"scp"`
 
-### description
+### parties[].description
 
 A small description of the history or the political direction of this party.
 
@@ -95,7 +95,7 @@ Example: `"The SCP was established in 2000 and is a very cool party. Vote for it
 
 <small>(Of course, this is a terrible example :wink:)</small>
 
-### logo (optional)
+### parties[].logo (optional)
 
 The party's logo. This string will be passed to the `src` attribute of an `img` element. You can
 therefore use an URL or a Base64 encoded file. For simplicity, this is what the configurator will
@@ -105,3 +105,82 @@ should have the following dimensions: 400 x 400 px.
 
 Example for Base64: `"data:image/svg+xml;base64,PHN2ZyBjbGlwLXJ1bGU9ImV2ZW5vZGQi..."`
 Example for URL: `"https://example.com/logos/scp.svg"`
+
+## Theses
+
+The `theses` property in the root section contains an array of theses:
+
+```json
+{
+  // root object (title, etc.)
+  // ...
+  "theses": [
+    {
+      "statement": "The Sorting Hat should implement a GDPR-compliant privacy policy.",
+      "positions": {
+        "spew": {
+          "position": "approve",
+          "explanation": "If all of this comes off as mixed-up to you, that's because it is! ..."
+        },
+        "snape": {
+          "position": "reject",
+          "explanation": "Our feature set is unparalleled in the industry, ..."
+        },
+        // more positions
+      }
+    },
+    {
+      // another thesis
+    }
+  ],
+}
+```
+
+### theses[].name
+
+A short name, describing what this thesis is about. Two to four words. Will be visible above the
+actual statement.
+
+Example: `"Political Education"`
+
+### theses[].statement
+
+The actual thesis. Choose your words carefully! The thesis needs to be balanced and specific enough.
+Explain what should be implemented, but don't be too detailed about how this might be achieved.
+
+Example: `"The government should support political education by financing the election compass."`
+
+### theses[].positions[]
+
+Every thesis has a `positions` key containing an array of answers:
+
+```json
+{
+  // thesis object
+  // ...
+  "spew": {
+    "position": "approve",
+    "explanation": "If all of this comes off as mixed-up to you, that's because it is! ..."
+  },
+  {
+    // another position
+  }
+}
+```
+
+#### theses[].positions[].position
+
+The parties position regarding the respective thesis.
+
+Possible values:
+
+- `approve` – The party approves this thesis.
+- `neutral` – The party is neutral to this thesis.
+- `reject` – The party rejects this thesis.
+- `skip` – The party didn't provide any position.
+
+#### theses[].positions[].explanation
+
+The parties explanation regarding their position.
+
+Example: `"If all of this comes off as mixed-up to you, that's because it is! ..."`
