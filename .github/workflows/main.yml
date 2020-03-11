@@ -15,11 +15,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Build
+      run: npm ci && npm i -g vuepress && vuepress build
+        
     - name: Deploy VuePress website to GitHub Pages
-      uses: grasilife/github-pages-deploy-action@v1.2
+      if: success()
+      uses: crazy-max/ghaction-github-pages@v1.3.0
+      with:
+        build_dir: .vuepress/dist
+        fqdn: open-election-compass.com
       env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BASE_BRANCH: master
-        BRANCH: gh-pages
-        FOLDER: .vuepress/dist
-        BUILD_SCRIPT: npm ci && npm i -g vuepress && vuepress build
+        GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
