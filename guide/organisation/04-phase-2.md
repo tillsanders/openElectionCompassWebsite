@@ -1,4 +1,6 @@
-# Phase 2 – Gathering your team (4 months prior to the election)
+# Phase 2 – Your Team
+
+*(4 months prior to the election)*
 
 Of course, you can not do this all on your own. To succeed, you need experts, advisors and
 supporters.

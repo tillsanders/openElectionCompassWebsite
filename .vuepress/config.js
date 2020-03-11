@@ -1,18 +1,6 @@
 module.exports = {
   title: 'Open Election Compass',
   description: 'Tiny election compass, free and open source.',
-  plugins: [
-    [
-      'vuepress-plugin-contributors',
-      {
-        showAvatar: true,
-        showCount: true,
-        avatarSize: 32,
-        defaultAvatar: '/not-found.png',
-        avatarProvider: 'github'
-      }
-    ]
-  ],
   themeConfig: {
     logo: '/oec-navbar-logo.png',
     nav: [
@@ -20,7 +8,7 @@ module.exports = {
       {
         text: 'Guide',
         items: [
-          { text: 'Organisation Guide', link: '/guide/organisation' },
+          { text: 'Organisation Guide', link: '/guide/organisation/01-introduction.html' },
           {
             text: 'Technical Guide',
             items: [
@@ -58,10 +46,25 @@ module.exports = {
           { text: 'Kommunalwahl Lüdenscheid 2020', link: 'https://tillsanders.github.io/openElectionCompass/demo-de.html' },
         ]
       },
+      { text: 'Feedback', link: 'https://forms.gle/dZ6Hwdp2GGX8s4VeA' },
     ],
     sidebarDepth: 3,
     displayAllHeaders: true,
     sidebar: {
+      '/guide/organisation/': [
+        '01-introduction',
+        '02-rules',
+        '03-phase-1',
+        '04-phase-2',
+        '05-phase-3',
+        '06-phase-4',
+        '07-phase-5',
+        '08-phase-6',
+        '09-phase-7',
+        '10-phase-8',
+        '11-phase-9',
+        '12-phase-10',
+      ],
       '/guide/technical/': [
         'overview',
         'deployment',

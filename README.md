@@ -2,7 +2,7 @@
 home: true
 heroImage: /oec-hero.png
 actionText: Get Started →
-actionLink: /guide/
+actionLink: /guide/organisation/01-introduction.html
 footer: MIT Licensed | Copyright © 2019-present Till Sanders
 ---
 

@@ -1,4 +1,6 @@
-# Phase 3 – Getting the parties on board (after building your team)
+# Phase 3 – The Parties
+
+*(after building your team)*
 
 It is important, to get the parties attention. Normally, one party alone has no choice but to
 participate. You wouldn't want to be the only party missing! But if multiple parties are

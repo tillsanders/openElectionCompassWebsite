@@ -1,4 +1,6 @@
-# Phase 1 – Preparing (4 - 5 months prior to the election)
+# Phase 1 – Preparing
+
+*(4 - 5 months prior to the election)*
 
 Organisation, planning and communication are paramount. You can use our guide and timeline as a
 template, but be sure to adapt it to your circumstances.

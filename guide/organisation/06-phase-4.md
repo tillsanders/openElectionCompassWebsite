@@ -1,4 +1,6 @@
-# Phase 4 – Preparing the workshop (2 weeks prior to the workshop)
+# Phase 4 – Preparing the Workshop
+
+*(2 weeks prior to the workshop)*
 
 The theses for your election compass obviously can not be written all by yourself. They need to
 represent the society as a whole. The choice of theses decides over the quality of your election
