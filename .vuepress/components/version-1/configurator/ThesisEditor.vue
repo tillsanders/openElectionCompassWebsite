@@ -6,13 +6,13 @@
       <h2 v-else>Edit thesis</h2>
       <ValidationObserver v-slot="{ invalid }">
         <form @submit.prevent="$emit('save')">
-          <!-- Name -->
+          <!-- Title -->
           <FieldInput
-            alias="name"
-            name="Name"
+            alias="title"
+            name="Title"
             type="text"
             rules="required"
-            v-model="thesis.name"
+            v-model="thesis.title"
             placeholder="Political Education"
             description="A short name, describing what this thesis is about. Two to four words. Will be visible above the actual statement."
           />

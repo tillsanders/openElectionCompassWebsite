@@ -116,6 +116,7 @@ The `theses` property in the root section contains an array of theses:
   // ...
   "theses": [
     {
+      "title": "Sorting Hat",
       "statement": "The Sorting Hat should implement a GDPR-compliant privacy policy.",
       "positions": {
         "spew": {
@@ -136,7 +137,7 @@ The `theses` property in the root section contains an array of theses:
 }
 ```
 
-### theses[].name
+### theses[].title
 
 A short name, describing what this thesis is about. Two to four words. Will be visible above the
 actual statement.

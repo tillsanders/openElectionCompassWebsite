@@ -24,7 +24,7 @@
         >
           <span v-handle class="handle"><Icon name="bars" /></span>
           <span>
-            <strong>{{ thesis.name }}</strong>
+            <strong>{{ thesis.title }}</strong>
             <br>
             <small>
               <span v-if="positionsMissing(thesis) === store.parties.length">
@@ -88,7 +88,7 @@ export default {
       });
       this.$set(this, 'thesis', {
         uuid: null, // indicates, that this thesis is not yet present in the theses array
-        name: '',
+        title: '',
         statement: '',
         positions,
       });
