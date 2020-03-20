@@ -34,6 +34,10 @@ export default {
         languages: [{ uuid: uuid(), name: 'English', code: 'en' }],
         title: {},
         subtitle: {},
+        introduction: {
+          heading: {},
+          text: {},
+        },
         parties: [],
         theses: [],
       },
@@ -53,6 +57,10 @@ export default {
         languages: [{ uuid: uuid(), name: 'English', code: 'en' }],
         title: {},
         subtitle: {},
+        introduction: {
+          heading: {},
+          text: {},
+        },
         parties: [],
         theses: [],
       });

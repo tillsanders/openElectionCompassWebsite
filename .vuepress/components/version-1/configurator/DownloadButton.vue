@@ -62,6 +62,10 @@ export default {
       });
       configuration.title = this.keyTranslationsByLanguageCode(store.languages, store.title);
       configuration.subtitle = this.keyTranslationsByLanguageCode(store.languages, store.subtitle);
+      configuration.introduction = {
+        heading: this.keyTranslationsByLanguageCode(store.languages, store.introduction.heading),
+        text: this.keyTranslationsByLanguageCode(store.languages, store.introduction.text),
+      };
       configuration.parties = this.store.parties.map(party => {
         return {
           alias: party.alias,

@@ -85,6 +85,8 @@ export default {
 
         this.store.title = this.keyTranslationsByLanguageUuid(this.store.languages, configuration.title);
         this.store.subtitle = this.keyTranslationsByLanguageUuid(this.store.languages, configuration.subtitle);
+        this.store.introduction.heading = this.keyTranslationsByLanguageUuid(this.store.languages, configuration.introduction.heading);
+        this.store.introduction.text = this.keyTranslationsByLanguageUuid(this.store.languages, configuration.introduction.text);
         configuration.parties.forEach((party) => {
           this.store.parties.push({
             uuid: uuid(),
