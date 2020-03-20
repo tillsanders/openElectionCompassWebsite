@@ -9,7 +9,7 @@
       <span>Load from file</span>
     </button>
     <input type="file" class="file-button" @input="loadFromFile($event)" />
-    <button class="small" @click="$emit('clear')">
+    <button class="small" @click="$emit('reset')">
       <Icon name="trash" />
       <span>Clear browser storage</span>
     </button>
@@ -18,6 +18,8 @@
 
 <script>
 import uuid from 'uuid/v1';
+import _forEach from 'lodash/forEach';
+
 export default {
   name: 'StorageButtons',
   props: {
@@ -49,43 +51,66 @@ export default {
       }
       const reader = new FileReader();
       reader.onload = () => {
-        console.log(reader.result);
         this.load(reader.result);
       };
       reader.readAsText(file);
     },
-    load(json) {
-      const configuration = JSON.parse(json);
-      this.store.title = configuration.title;
-      this.store.subtitle = configuration.subtitle;
-      this.store.language = configuration.language;
-      configuration.parties.forEach((party) => {
-        this.store.parties.push({
-          uuid: uuid(),
-          alias: party.alias,
-          name: party.name,
-          short: party.short,
-          description: party.description,
-          logo: party.logo,
-        });
+    /*
+     * Translations are keyed by language.uuid internally. The format however provides translations
+     * keyed by the language code (e.g. 'en'), because this is shorter and more human-readable. This
+     * method converts the language code keys to uuid keys.
+     */
+    keyTranslationsByLanguageUuid(languages, translations) {
+      const converted = {};
+      _forEach(languages, ({code, uuid}) => {
+        converted[uuid] = translations[code];
       });
-      configuration.theses.forEach((thesis) => {
-        const positions = {};
-        this.store.parties.forEach(party => {
-          if (thesis.positions[party.alias]) {
-            positions[party.uuid] = {
-              name: thesis.positions[party.alias].name,
-              statement: thesis.positions[party.alias].statement,
-              position: thesis.positions[party.alias].position,
-              explanation: thesis.positions[party.alias].explanation,
-            };
-          }
+      return converted;
+    },
+    load(json) {
+      this.$emit('reset');
+
+      this.$nextTick(() => {
+        const configuration = JSON.parse(json);
+        configuration.languages.forEach((language) => {
+          this.store.languages.push({
+            uuid: uuid(),
+            name: language.name,
+            code: language.code,
+          });
         });
-        this.store.theses.push({
-          uuid: uuid(),
-          name: thesis.name,
-          statement: thesis.statement,
-          positions,
+
+        // Remove first language as this was the default language added when resetting the store:
+        this.store.languages.splice(0, 1);
+
+        this.store.title = this.keyTranslationsByLanguageUuid(this.store.languages, configuration.title);
+        this.store.subtitle = this.keyTranslationsByLanguageUuid(this.store.languages, configuration.subtitle);
+        configuration.parties.forEach((party) => {
+          this.store.parties.push({
+            uuid: uuid(),
+            alias: party.alias,
+            name: this.keyTranslationsByLanguageUuid(this.store.languages, party.name),
+            short: this.keyTranslationsByLanguageUuid(this.store.languages, party.short),
+            description: this.keyTranslationsByLanguageUuid(this.store.languages, party.description),
+            logo: party.logo,
+          });
+        });
+        configuration.theses.forEach((thesis) => {
+          const positions = {};
+          this.store.parties.forEach(party => {
+            if (thesis.positions[party.alias]) {
+              positions[party.uuid] = {
+                position: thesis.positions[party.alias].position,
+                explanation: this.keyTranslationsByLanguageUuid(this.store.languages, thesis.positions[party.alias].explanation),
+              };
+            }
+          });
+          this.store.theses.push({
+            uuid: uuid(),
+            title: this.keyTranslationsByLanguageUuid(this.store.languages, thesis.title),
+            statement: this.keyTranslationsByLanguageUuid(this.store.languages, thesis.statement),
+            positions,
+          });
         });
       });
     },

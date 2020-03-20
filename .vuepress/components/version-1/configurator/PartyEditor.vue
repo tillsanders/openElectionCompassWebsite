@@ -7,25 +7,29 @@
       <ValidationObserver v-slot="{ invalid }">
         <form @submit.prevent="$emit('save')">
           <!-- Name -->
-          <FieldInput
-            alias="name"
-            name="Full Name"
-            type="text"
-            rules="required"
-            v-model="party.name"
-            placeholder="Super Democratic Party"
-            description="The full name of the party, without abbrevations."
-          />
+          <LanguageSwitch :languages="store.languages" :values="party.name" v-slot="{selected}">
+            <FieldInput
+              alias="name"
+              name="Full Name"
+              type="text"
+              rules="required"
+              v-model="party.name[selected]"
+              placeholder="Super Democratic Party"
+              description="The full name of the party, without abbrevations."
+            />
+          </LanguageSwitch>
           <!-- Short Name -->
-          <FieldInput
-            alias="short"
-            name="Short Name / Abbrevation"
-            type="text"
-            rules="required"
-            v-model="party.short"
-            placeholder="SCP"
-            description="The abbrevation or short name of the party, as it is usually used in logos, charts, etc."
-          />
+          <LanguageSwitch :languages="store.languages" :values="party.short" v-slot="{selected}">
+            <FieldInput
+              alias="short"
+              name="Short Name / Abbrevation"
+              type="text"
+              rules="required"
+              v-model="party.short[selected]"
+              placeholder="SCP"
+              description="The abbrevation or short name of the party, as it is usually used in logos, charts, etc."
+            />
+          </LanguageSwitch>
           <!-- Alias -->
           <FieldInput
             alias="alias"
@@ -37,15 +41,17 @@
             description="The identifier of the party, used for technical purposes. Just enter the abbrevation of the party name in small letters and make sure it is unique (no two parties may have the same identifier)."
           />
           <!-- Description -->
-          <FieldInput
-            alias="description"
-            name="Description"
-            type="text"
-            rules="required"
-            v-model="party.description"
-            description="A small description of the history or the political direction of this party."
-          />
-          <!-- Description -->
+          <LanguageSwitch :languages="store.languages" :values="party.description" v-slot="{selected}">
+            <FieldInput
+              alias="description"
+              name="Description"
+              type="text"
+              rules="required"
+              v-model="party.description[selected]"
+              description="A small description of the history or the political direction of this party."
+            />
+          </LanguageSwitch>
+          <!-- Logo -->
           <FieldFile
             alias="logo"
             name="Party Logo"
@@ -68,6 +74,7 @@ import { ValidationObserver } from 'vee-validate';
 import Modal from '../../Modal.vue';
 import FieldInput from '../../fields/FieldInput.vue';
 import FieldFile from '../../fields/FieldFile.vue';
+import LanguageSwitch from './LanguageSwitch.vue';
 
 export default {
   name: 'PartyEditor',
@@ -80,12 +87,17 @@ export default {
       type: Object,
       default: null,
     },
+    store: {
+      type: Object,
+      required: true,
+    },
   },
   components: {
     Modal,
     FieldInput,
     FieldFile,
     ValidationObserver,
+    LanguageSwitch,
   },
 };
 </script>

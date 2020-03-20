@@ -1,6 +1,7 @@
 <template>
   <div>
-    <StorageButtons :store="store" @clear="clear" />
+    <StorageButtons :store="store" @reset="reset" />
+    <Languages :store="store" />
     <GeneralInformation :store="store" />
     <Parties :store="store" />
     <Theses :store="store" />
@@ -11,7 +12,9 @@
 
 <script>
 import { localize } from 'vee-validate';
+import uuid from 'uuid/v1';
 import en from 'vee-validate/dist/locale/en.json';
+import Languages from './Languages.vue';
 import GeneralInformation from './GeneralInformation.vue';
 import Parties from './Parties.vue';
 import Theses from './Theses.vue';
@@ -28,15 +31,16 @@ export default {
   data() {
     return {
       store: {
-        title: '',
-        subtitle: '',
-        language: '',
+        languages: [{ uuid: uuid(), name: 'English', code: 'en' }],
+        title: {},
+        subtitle: {},
         parties: [],
         theses: [],
       },
     };
   },
   components: {
+    Languages,
     GeneralInformation,
     Parties,
     Theses,
@@ -44,11 +48,11 @@ export default {
     StorageButtons,
   },
   methods: {
-    clear() {
+    reset() {
       this.$set(this, 'store', {
-        title: '',
-        subtitle: '',
-        language: '',
+        languages: [{ uuid: uuid(), name: 'English', code: 'en' }],
+        title: {},
+        subtitle: {},
         parties: [],
         theses: [],
       });
@@ -99,7 +103,7 @@ export default {
     color: rgba(0, 0, 0, 0.7);
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   }
-  button.small:hover, , a.button.small:hover {
+  button.small:hover, a.button.small:hover {
 	  background-color: rgba(0, 0, 0, 0.075);
   }
   button .icon + span, button span + .icon,

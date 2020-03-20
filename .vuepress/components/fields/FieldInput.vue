@@ -1,6 +1,6 @@
 <template>
   <div class="field">
-    <ValidationProvider :name="name" :rules="rules" v-slot="{ changed, errors }">
+    <ValidationProvider :name="name" :rules="rules" v-slot="{ changed, errors }" ref="field">
       <label
         :for="`generator-${alias}`"
         :class="errors.length > 0 ? 'invalid' : changed ? 'valid' : ''"
@@ -8,8 +8,9 @@
         {{ name }}
       </label>
       <input
-        :value="value"
-        @input="$emit('change', $event.target.value)"
+        :value="cache"
+        @input="updateCache($event.target.value)"
+        @blur="publish()"
         :type="type"
         :name="alias"
         :id="`generator-${alias}`"
@@ -27,15 +28,29 @@
 <script>
 import { ValidationProvider } from 'vee-validate';
 import { extend } from 'vee-validate';
-import { alpha, length, regex, required } from 'vee-validate/dist/rules';
+import { alpha, length, min, regex, required } from 'vee-validate/dist/rules';
 
 extend('alpha', alpha);
 extend('length', length);
+extend('min', min);
 extend('regex', regex);
 extend('required', required);
 
 export default {
   name: 'FieldInput',
+  data() {
+    return {
+      cache: null,
+    };
+  },
+  mounted() {
+    this.cache = this.value;
+  },
+  watch: {
+    value(value) {
+      this.cache = value;
+    },
+  },
   model: {
     prop: 'value',
     event: 'change'
@@ -71,6 +86,20 @@ export default {
     description: {
       type: String,
       default: '',
+    },
+  },
+  methods: {
+    updateCache(value) {
+      this.cache = value;
+    },
+    publish() {
+      this.$refs.field.validate(this.cache).then(({valid}) => {
+        if (valid) {
+          this.$emit('change', this.cache);
+        } else {
+          this.$emit('change', '');
+        }
+      })
     },
   },
   components: {

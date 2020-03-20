@@ -3,11 +3,12 @@
     <party-editor
       :visible="party !== null"
       :party="party"
+      :store="store"
       @save="save"
       @cancel="cancel"
     />
     <fieldset>
-      <legend>2. Parties</legend>
+      <legend>3. Parties</legend>
       <SlickList
         v-if="store.parties.length > 0"
         lockAxis="y"
@@ -24,9 +25,9 @@
           <span v-handle class="handle"><Icon name="bars" /></span>
           <img v-if="party.logo" :src="party.logo" class="logo" />
           <span>
-            <strong>{{ party.short }}</strong>
+            <strong>{{ party.short[defaultLanguage] }}</strong>
             <br>
-            <small>{{ party.name }}</small>
+            <small>{{ party.name[defaultLanguage] }}</small>
           </span>
           <button @click="edit(party)" class="small">
             <Icon name="edit" /><span>Edit</span>
@@ -68,9 +69,9 @@ export default {
       this.$set(this, 'party', {
         uuid: null, // indicates, that this party is not yet present in the parties array
         alias: '',
-        name: '',
-        short: '',
-        description: '',
+        name: {},
+        short: {},
+        description: {},
         logo: null,
       });
     },
@@ -105,6 +106,11 @@ export default {
     remove(party) {
       const index = this.findIndexOfParty(party);
       this.store.parties.splice(index, 1);
+    },
+  },
+  computed: {
+    defaultLanguage() {
+      return this.store.languages[0].uuid;
     },
   },
   components: {

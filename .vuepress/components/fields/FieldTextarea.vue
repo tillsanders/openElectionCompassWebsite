@@ -1,6 +1,6 @@
 <template>
   <div class="field">
-    <ValidationProvider :name="name" :rules="rules" v-slot="{ changed, errors }">
+    <ValidationProvider :name="name" :rules="rules" v-slot="{ changed, errors }" ref="field">
       <label
         :for="`generator-${alias}`"
         :class="errors.length > 0 ? 'invalid' : changed ? 'valid' : ''"
@@ -8,8 +8,9 @@
         {{ name }}
       </label>
       <textarea
-        :value="value"
-        @input="$emit('change', $event.target.value)"
+        :value="cache"
+        @input="updateCache($event.target.value)"
+        @blur="publish()"
         :name="alias"
         :id="`generator-${alias}`"
         :placeholder="placeholder"
@@ -33,6 +34,19 @@ extend('required', required);
 
 export default {
   name: 'FieldTextarea',
+  data() {
+    return {
+      cache: null,
+    };
+  },
+  mounted() {
+    this.cache = this.value;
+  },
+  watch: {
+    value(value) {
+      this.cache = value;
+    },
+  },
   model: {
     prop: 'value',
     event: 'change'
@@ -65,6 +79,20 @@ export default {
   },
   components: {
     ValidationProvider,
+  },
+  methods: {
+    updateCache(value) {
+      this.cache = value;
+    },
+    publish() {
+      this.$refs.field.validate(this.cache).then(({valid}) => {
+        if (valid) {
+          this.$emit('change', this.cache);
+        } else {
+          this.$emit('change', '');
+        }
+      })
+    },
   },
 };
 </script>

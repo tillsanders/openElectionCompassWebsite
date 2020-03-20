@@ -8,7 +8,7 @@
       @cancel="cancel"
     />
     <fieldset>
-      <legend>3. Theses</legend>
+      <legend>4. Theses</legend>
       <SlickList
         v-if="store.theses.length > 0 && store.parties.length > 0"
         lockAxis="y"
@@ -24,7 +24,7 @@
         >
           <span v-handle class="handle"><Icon name="bars" /></span>
           <span>
-            <strong>{{ thesis.title }}</strong>
+            <strong>{{ thesis.title[defaultLanguage] }}</strong>
             <br>
             <small>
               <span v-if="positionsMissing(thesis) === store.parties.length">
@@ -83,13 +83,13 @@ export default {
       this.store.parties.forEach(party => {
         positions[party.uuid] = {
           position: null,
-          explanation: null,
+          explanation: {},
         };
       });
       this.$set(this, 'thesis', {
         uuid: null, // indicates, that this thesis is not yet present in the theses array
-        title: '',
-        statement: '',
+        title: {},
+        statement: {},
         positions,
       });
     },
@@ -132,6 +132,11 @@ export default {
     remove(thesis) {
       const index = this.findIndexOfThesis(thesis);
       this.store.theses.splice(index, 1);
+    },
+  },
+  computed: {
+    defaultLanguage() {
+      return this.store.languages[0].uuid;
     },
   },
   components: {

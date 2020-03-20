@@ -14,6 +14,8 @@
 
 <script>
 import uuid from 'uuid/v1';
+import _forEach from 'lodash/forEach';
+
 export default {
   name: 'DownloadButton',
   data() {
@@ -37,18 +39,35 @@ export default {
       const blob = new Blob([ json ], { type: 'application/json' });
       return URL.createObjectURL(blob);
     },
+    /*
+     * Translations are keyed by language.uuid internally. The format however expects translations
+     * keyed by the language code (e.g. 'en'), because this is shorter and more human-readable. This
+     * method converts the uuid keys to language code keys.
+     */
+    keyTranslationsByLanguageCode(languages, translations) {
+      const converted = {};
+      _forEach(languages, ({code, uuid}) => {
+        converted[code] = translations[uuid];
+      });
+      return converted;
+    },
     save(store) {
       const configuration = {};
       configuration.version = '1';
-      configuration.title = store.title;
-      configuration.subtitle = store.subtitle;
-      configuration.language = store.language;
+      configuration.languages = this.store.languages.map(language => {
+        return {
+          name: language.name,
+          code: language.code,
+        };
+      });
+      configuration.title = this.keyTranslationsByLanguageCode(store.languages, store.title);
+      configuration.subtitle = this.keyTranslationsByLanguageCode(store.languages, store.subtitle);
       configuration.parties = this.store.parties.map(party => {
         return {
           alias: party.alias,
-          name: party.name,
-          short: party.short,
-          description: party.description,
+          name: this.keyTranslationsByLanguageCode(store.languages, party.name),
+          short: this.keyTranslationsByLanguageCode(store.languages, party.short),
+          description: this.keyTranslationsByLanguageCode(store.languages, party.description),
           logo: party.logo,
         };
       });
@@ -57,16 +76,14 @@ export default {
         this.store.parties.forEach(party => {
           if (thesis.positions[party.uuid]) {
             positions[party.alias] = {
-              name: thesis.positions[party.uuid].name,
-              statement: thesis.positions[party.uuid].statement,
               position: thesis.positions[party.uuid].position,
-              explanation: thesis.positions[party.uuid].explanation,
+              explanation: this.keyTranslationsByLanguageCode(store.languages, thesis.positions[party.uuid].explanation),
             };
           }
         });
         return {
-          name: thesis.name,
-          statement: thesis.statement,
+          title: this.keyTranslationsByLanguageCode(store.languages, thesis.title),
+          statement: this.keyTranslationsByLanguageCode(store.languages, thesis.statement),
           positions,
         };
       });
