@@ -43,7 +43,7 @@ module.exports = {
         text: 'Demos',
         items: [
           { text: 'Hogwarts Demo', link: 'https://tillsanders.github.io/openElectionCompass/index.html' },
-          { text: 'Kommunalwahl Lüdenscheid 2020', link: 'https://tillsanders.github.io/openElectionCompass/demo-de.html' },
+          { text: 'Kommunalwahl Lüdenscheid 2020', link: 'https://tillsanders.github.io/openElectionCompass/demo-luedenscheid.html' },
         ]
       },
       { text: 'Feedback', link: 'https://forms.gle/dZ6Hwdp2GGX8s4VeA' },
