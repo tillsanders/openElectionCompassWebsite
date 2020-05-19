@@ -35,7 +35,7 @@ module.exports = {
         text: 'Community',
         items: [
           { text: 'GitHub', link: 'https://github.com/tillsanders/openElectionCompass' },
-          { text: 'Discord', link: 'https://discord.gg/qjVsRDd' },
+          { text: 'Chat / Forum', link: 'https://spectrum.chat/openelectioncompass' },
           { text: 'E-Mail Newsletter', link: 'http://eepurl.com/gRApTD' },
         ]
       },
