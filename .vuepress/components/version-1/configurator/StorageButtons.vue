@@ -2,16 +2,16 @@
   <div class="buttons">
     <button class="small" @click="loadFromBrowser">
       <Icon name="history" />
-      <span>Load from browser storage</span>
+      <span>{{ $t('load-from-localstorage') }}</span>
     </button>
     <button class="small" @click="openFileDialog">
       <Icon name="upload" />
-      <span>Load from file</span>
+      <span>{{ $t('load-from-file') }}</span>
     </button>
     <input type="file" class="file-button" @input="loadFromFile($event)" />
     <button class="small" @click="$emit('reset')">
       <Icon name="trash" />
-      <span>Clear browser storage</span>
+      <span>{{ $t('clear-localstorage') }}</span>
     </button>
   </div>
 </template>
@@ -117,6 +117,23 @@ export default {
       });
     },
   },
+  mounted() {
+    this.$i18n.locale = this.$lang
+  },
+  i18n: {
+    messages: {
+      'en-US': {
+        'load-from-localstorage': 'Load from browser storage',
+        'load-from-file': 'Load from file',
+        'clear-localstorage': 'Clear browser storage'
+      },
+      'de-DE': {
+        'load-from-localstorage': 'Aus Browserspeicher laden',
+        'load-from-file': 'Aus Datei laden',
+        'clear-localstorage': 'Browserspeicher leeren'
+      }
+    }
+  }
 };
 </script>
 

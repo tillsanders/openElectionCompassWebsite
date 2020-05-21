@@ -13,6 +13,7 @@
 <script>
 import { localize } from 'vee-validate';
 import uuid from 'uuid/v1';
+import de from 'vee-validate/dist/locale/de.json';
 import en from 'vee-validate/dist/locale/en.json';
 import Languages from './Languages.vue';
 import GeneralInformation from './GeneralInformation.vue';
@@ -23,6 +24,7 @@ import StorageButtons from './StorageButtons.vue';
 
 // Install vee-validate error messages
 localize({
+  de,
   en,
 });
 
@@ -66,6 +68,9 @@ export default {
       });
     },
   },
+  mounted() {
+    localize(this.$lang.substring(0, 2));
+  }
 };
 </script>
 

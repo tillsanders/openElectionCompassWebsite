@@ -7,11 +7,8 @@
       @cancel="cancel"
     />
     <fieldset>
-      <legend>1. Languages</legend>
-      <p>
-        The first language will also be the default language if the browsers language doesn't match
-        any other language.
-      </p>
+      <legend>{{ $t('title') }}</legend>
+      <p>{{ $t('explanation') }}</p>
       <SlickList
         lockAxis="y"
         :useDragHandle="true"
@@ -29,15 +26,15 @@
             <strong>{{ language.name }} ({{ language.code }})</strong>
           </span>
           <button @click="edit(language)" class="small">
-            <Icon name="edit" /><span>Edit</span>
+            <Icon name="edit" /><span>{{ $t('edit') }}</span>
           </button>
           <button @click="remove(language)" class="small" :disabled="store.languages.length < 2">
-            <Icon name="trash" /><span>Remove</span>
+            <Icon name="trash" /><span>{{ $t('remove') }}</span>
           </button>
         </SlickItem>
       </SlickList>
       <button @click="add" class="add small">
-        <Icon name="plus" /><span>Add language</span></button>
+        <Icon name="plus" /><span>{{ $t('add') }}</span></button>
     </fieldset>
   </div>
 </template>
@@ -60,6 +57,9 @@ export default {
       type: Object,
       required: true,
     },
+  },
+  mounted() {
+    this.$i18n.locale = this.$lang
   },
   methods: {
     add() {
@@ -110,6 +110,24 @@ export default {
   directives: {
     handle: HandleDirective,
   },
+  i18n: {
+    messages: {
+      'en-US': {
+        title: '1. Languages',
+        explanation: 'The first language will also be the default language if the browsers language doesn\'t match any other language.',
+        edit: 'Edit',
+        remove: 'Remove',
+        add: 'Add language'
+      },
+      'de-DE': {
+        title: '1. Sprachen',
+        explanation: 'Die oberste Sprache ist gleichzeitig die Standardsprache, falls die im Browser eingestellte Sprache zu keiner unterstützten Sprache passt.',
+        edit: 'Bearbeiten',
+        remove: 'Löschen',
+        add: 'Sprache hinzufügen'
+      }
+    }
+  }
 };
 </script>
 

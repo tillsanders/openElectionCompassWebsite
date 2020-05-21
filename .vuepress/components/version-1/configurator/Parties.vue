@@ -8,7 +8,7 @@
       @cancel="cancel"
     />
     <fieldset>
-      <legend>3. Parties</legend>
+      <legend>{{ $t('title') }}</legend>
       <SlickList
         v-if="store.parties.length > 0"
         lockAxis="y"
@@ -30,18 +30,16 @@
             <small>{{ party.name[defaultLanguage] }}</small>
           </span>
           <button @click="edit(party)" class="small">
-            <Icon name="edit" /><span>Edit</span>
+            <Icon name="edit" /><span>{{ $t('edit') }}</span>
           </button>
           <button @click="remove(party)" class="small">
-            <Icon name="trash" /><span>Remove</span>
+            <Icon name="trash" /><span>{{ $t('remove') }}</span>
           </button>
         </SlickItem>
       </SlickList>
-      <p v-else class="empty">
-        You haven't added any parties yet.
-      </p>
+      <p v-else class="empty">{{ $t('empty') }}</p>
       <button @click="add" class="add small">
-        <Icon name="plus" /><span>Add party</span></button>
+        <Icon name="plus" /><span>{{ $t('add') }}</span></button>
     </fieldset>
   </div>
 </template>
@@ -63,6 +61,9 @@ export default {
       type: Object,
       required: true,
     },
+  },
+  mounted() {
+    this.$i18n.locale = this.$lang
   },
   methods: {
     add() {
@@ -121,6 +122,24 @@ export default {
   directives: {
     handle: HandleDirective,
   },
+  i18n: {
+    messages: {
+      'en-US': {
+        title: '3. Parties',
+        edit: 'Edit',
+        remove: 'Remove',
+        add: 'Add party',
+        empty: 'You haven\'t added any parties yet.'
+      },
+      'de-DE': {
+        title: '3. Parteien',
+        edit: 'Bearbeiten',
+        remove: 'Löschen',
+        add: 'Partei hinzufügen',
+        empty: 'Du hast noch keine Parteien hinzugefügt.'
+      }
+    }
+  }
 };
 </script>
 

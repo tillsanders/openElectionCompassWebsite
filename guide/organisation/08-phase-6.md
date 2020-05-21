@@ -5,7 +5,8 @@
 Now it is time to let the parties answer and position themselves.
 
 - Send the theses to every party. Until we have a tool to collect answers, use an online form!
-- Make sure to also collect the logos (see the [Technical Guide](./technical.html)).
+- Make sure to also collect the logos (see the [Technical
+  Guide](../technical/configuration.html#parties-logo)).
 - Give the parties 2 - 5 weeks to answer, depending on your timeline.
 
 In the meantime, prepare to publish the election compass.

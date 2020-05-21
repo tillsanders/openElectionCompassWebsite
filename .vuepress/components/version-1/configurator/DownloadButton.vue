@@ -7,7 +7,7 @@
       download="configuration.json"
     >
       <Icon name="download" />
-      <span>Download</span>
+      <span>{{ $t('download') }}</span>
     </a>
   </div>
 </template>
@@ -33,6 +33,7 @@ export default {
     this.$watch('store', (store) => {
       this.save(store);
     }, { deep: true });
+    this.$i18n.locale = this.$lang
   },
   methods: {
     toJsonBlobLink(json) {
@@ -97,6 +98,16 @@ export default {
       this.configurationBlobUrl = this.toJsonBlobLink(json);
     },
   },
+  i18n: {
+    messages: {
+      'en-US': {
+        download: 'Download',
+      },
+      'de-DE': {
+        download: 'Herunterladen',
+      }
+    }
+  }
 };
 </script>
 

@@ -26,5 +26,5 @@ donations, though that might change in the future. You can always help us in sim
   experience and send it to us, so we can publish it here. If you can, attach photos.
 - **Feedback:** Did something not work as expected? This can be a technical problem or a
   recommendation in this guide. [Please give us feedback](https://forms.gle/dZ6Hwdp2GGX8s4VeA)!
-- **Technical support**: You happen to be a Web Developer yourself and want to get involved? Please
+- **Technical support:** You happen to be a Web Developer yourself and want to get involved? Please
   do! There are many big and small things that can be improved with your help.

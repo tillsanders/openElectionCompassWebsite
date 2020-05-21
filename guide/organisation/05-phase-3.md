@@ -20,4 +20,4 @@ missing (one or two small parties might be tolerable).
   5. Listen to their feedback and take time to answer their questions
   6. (Hopefully) get their approval and support!
   7. Get some contact details
-- After the meeting, send them the most important information and thank them for participating.
+- One day after the meeting, send them the most important information and thank them for participating.

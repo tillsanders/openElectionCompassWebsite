@@ -8,7 +8,7 @@
       @cancel="cancel"
     />
     <fieldset>
-      <legend>4. Theses</legend>
+      <legend>{{ $t('title') }}</legend>
       <SlickList
         v-if="store.theses.length > 0 && store.parties.length > 0"
         lockAxis="y"
@@ -28,29 +28,29 @@
             <br>
             <small>
               <span v-if="positionsMissing(thesis) === store.parties.length">
-                Positions complete <Icon name="check" />
+                {{ $t('positions-complete') }} <Icon name="check" />
               </span>
               <span v-else>
-                Positions missing (only {{ positionsMissing(thesis) }} / {{ store.parties.length }})
+                {{ $t('positions-missing', { only: positionsMissing(thesis), total: store.parties.length }) }}
               </span>
             </small>
           </span>
           <button @click="edit(thesis)" class="small">
-            <Icon name="edit" /><span>Edit</span>
+            <Icon name="edit" /><span>{{ $t('edit') }}</span>
           </button>
           <button @click="remove(thesis)" class="small">
-            <Icon name="trash" /><span>Remove</span>
+            <Icon name="trash" /><span>{{ $('remove') }}</span>
           </button>
         </SlickItem>
       </SlickList>
       <p v-else-if="store.parties.length > 0" class="empty">
-        You haven't added any theses yet.
+        {{ $t('empty') }}
       </p>
       <p v-else class="empty">
-        You haven't added any theses yet, but add some parties first!
+        {{ $t('empty-parties') }}
       </p>
       <button @click="add" class="add small">
-        <Icon name="plus" /><span>Add thesis</span></button>
+        <Icon name="plus" /><span>{{ $t('add') }}</span></button>
     </fieldset>
   </div>
 </template>
@@ -73,6 +73,9 @@ export default {
       type: Object,
       required: true,
     },
+  },
+  mounted() {
+    this.$i18n.locale = this.$lang
   },
   methods: {
     positionsMissing(thesis) {
@@ -147,6 +150,30 @@ export default {
   directives: {
     handle: HandleDirective,
   },
+  i18n: {
+    messages: {
+      'en-US': {
+        title: '4. Theses',
+        'positions-complete': 'Positions complete',
+        'positions-missing': 'Positions missing (only {only} / {total})',
+        edit: 'Edit',
+        remove: 'Remove',
+        add: 'Add thesis',
+        empty: 'You haven\'t added any theses yet.',
+        'empty-parties': 'You haven\'t added any theses yet, but add some parties first!'
+      },
+      'de-DE': {
+        title: '4. Thesen',
+        'positions-complete': 'Antworten vollständig',
+        'positions-missing': 'Antworten unvollständig (nur {only} / {total})',
+        edit: 'Bearbeiten',
+        remove: 'Löschen',
+        add: 'These hinzufügen',
+        empty: 'Du hast noch keine Thesen hinzugefügt.',
+        'empty-parties': 'Du hast noch keine Thesen hinzugefügt, lege erst ein paar Parteien an!'
+      }
+    }
+  }
 };
 </script>
 
