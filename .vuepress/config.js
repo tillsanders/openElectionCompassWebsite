@@ -69,6 +69,13 @@ module.exports = {
               { text: 'Kommunalwahl Lüdenscheid 2020', link: 'https://tillsanders.github.io/openElectionCompass/demo-luedenscheid.html' },
             ]
           },
+          {
+            text: 'About',
+            items: [
+              { text: 'Contact (German)', link: '/about' },
+              { text: 'Privacy Policy (German)', link: '/privacy' },
+            ]
+          },
         ],
         sidebarDepth: 3,
         displayAllHeaders: true,
@@ -145,6 +152,13 @@ module.exports = {
             items: [
               { text: 'Hogwarts Demo', link: 'https://tillsanders.github.io/openElectionCompass/index.html' },
               { text: 'Kommunalwahl Lüdenscheid 2020', link: 'https://tillsanders.github.io/openElectionCompass/demo-luedenscheid.html' },
+            ]
+          },
+          {
+            text: 'Über',
+            items: [
+              { text: 'Impressum', link: '/about' },
+              { text: 'Datenschutzerklärung', link: '/privacy' },
             ]
           },
         ],
