@@ -266,3 +266,51 @@ Possible values:
 The parties explanation regarding their position.
 
 Example: `"If all of this comes off as mixed-up to you, that's because it is! ..."`
+
+## Links
+
+The optional `footer-links` property in the root section contains an array of links. These links
+will be displayed in the footer and at the bottom of the navigation. Here you can link to your home
+page, privacy policy, about page, etc.
+
+```json
+{
+  // version, languages, title, parties, theses, etc.
+  // ...
+  "footer-links": [
+    {
+      "text": {
+        "en": "About Hogwarts",
+        "de": "Über Hogwarts"
+      },
+      "href": {
+        "en": "https://open-election-compass.com",
+        "de": "https://open-election-compass.com/de/"
+      }
+    },
+    {
+      "text": {
+        "en": "About the Head Boy and Girl",
+        "de": "Über die Schülervertretung"
+      },
+      "href": {
+        "en": "https://open-election-compass.com",
+        "de": "https://open-election-compass.com/de/"
+      }
+    }
+  ]
+```
+
+### footer-links[].text <Badge text="multilingual"/>
+
+The link's caption. Keep it short and precise, 1 – 3 words.
+
+Example: `"Privacy Policy"`
+
+### footer-links[].href <Badge text="multilingual"/>
+
+The actual link as it appears in your browser's address bar. You can provide separate links for
+every language in case the linked resource is also multilingual. If not, simply enter the same link
+for every language.
+
+Example: `"https://example.com"`

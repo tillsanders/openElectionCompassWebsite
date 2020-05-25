@@ -267,3 +267,51 @@ Mögliche Werte:
 Die Antwort der Partei zu dieser These.
 
 Beispiel: `"Wenn all dies für dich durcheinander erscheint, liegt das daran, dass es so ist! ..."`
+
+## Links
+
+Das optionale `footer-links` Attribut auf der obersten Ebene enthält eine Liste (Array) an Links.
+Diese Links werden im Fußbereich der Seite sowie am Ende der Navigation angezeigt. Hier kann deine
+Startseite, Datenschutzerklärung, Impressum etc. verlinkt werden.
+
+```json
+{
+  // version, languages, title, parties, theses, etc.
+  // ...
+  "footer-links": [
+    {
+      "text": {
+        "de": "Über Hogwarts",
+        "en": "About Hogwarts"
+      },
+      "href": {
+        "de": "https://open-election-compass.com/de/",
+        "en": "https://open-election-compass.com"
+      }
+    },
+    {
+      "text": {
+        "de": "Über die Schülervertretung",
+        "en": "About the Head Boy and Girl"
+      },
+      "href": {
+        "de": "https://open-election-compass.com/de/",
+        "en": "https://open-election-compass.com"
+      }
+    }
+  ]
+```
+
+### footer-links[].text <Badge text="mehrsprachig"/>
+
+Die Beschriftung des Links. Vorzugsweise kurz und präzise, 1 – 3 Wörter.
+
+Example: `"Datenschutzerklärung"`
+
+### footer-links[].href <Badge text="mehrsprachig"/>
+
+Der eigentliche Link, wie er in der Addresszeile deines Browsers erscheint. Du kannst
+unterschiedliche Links je Sprache verwenden für den Fall, dass die verlinkte Ressource ebenfalls
+mehrsprachig ist. Andernfalls verwende einfach für jede Sprache denselben Link.
+
+Example: `"https://example.com"`
