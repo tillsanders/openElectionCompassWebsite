@@ -75,7 +75,9 @@ export default {
       position: relative;
       font-weight: bold;
     }
-    .switch button:hover {
+    .switch button:hover, .switch button:focus {
+      outline: none;
+      box-shadow: none;
       background-color: rgba(0, 0, 0, 0.075);
     }
     .switch li:first-of-type button {

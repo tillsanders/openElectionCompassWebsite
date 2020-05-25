@@ -123,6 +123,7 @@ export default {
     border-color: #ccc;
   }
   textarea:focus {
+    outline: none;
     border-color: #d69e2e;
   }
   ::placeholder {

@@ -134,6 +134,7 @@ export default {
     border-color: #ccc;
   }
   input:focus {
+    outline: none;
     border-color: #d69e2e;
   }
   ::placeholder {

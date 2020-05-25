@@ -110,6 +110,10 @@ export default {
   button:hover, a.button:hover {
 	  background-color: #daa843;
   }
+  button:focus, a.button:focus {
+	  outline: none;
+    box-shadow: 0 0 0 2px rgb(218, 168, 67);
+  }
   button.small, a.button.small {
     font-size: 0.875rem;
     background-color: rgba(0, 0, 0, 0.1);

@@ -100,6 +100,7 @@ export default {
     border-color: #ccc;
   }
   select:focus {
+    outline: none;
     border-color: #d69e2e;
   }
   ::placeholder {
