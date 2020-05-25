@@ -92,6 +92,12 @@ export default {
           positions,
         };
       });
+      configuration['footer-links'] = this.store.links.map(link => {
+        return {
+          text: this.keyTranslationsByLanguageCode(store.languages, link.text),
+          href: this.keyTranslationsByLanguageCode(store.languages, link.href),
+        };
+      });
 
       const json = JSON.stringify(configuration);
       localStorage.setItem('oec-v1-config', json);

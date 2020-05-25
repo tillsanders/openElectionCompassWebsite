@@ -114,6 +114,13 @@ export default {
             positions,
           });
         });
+        configuration['footer-links'].forEach((link) => {
+          this.store.links.push({
+            uuid: uuid(),
+            text: this.keyTranslationsByLanguageUuid(this.store.languages, link.text),
+            href: this.keyTranslationsByLanguageUuid(this.store.languages, link.href),
+          });
+        });
       });
     },
   },

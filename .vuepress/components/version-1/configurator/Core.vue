@@ -5,6 +5,7 @@
     <GeneralInformation :store="store" />
     <Parties :store="store" />
     <Theses :store="store" />
+    <Links :store="store" />
     <hr>
     <DownloadButton :store="store" />
   </div>
@@ -19,6 +20,7 @@ import Languages from './Languages.vue';
 import GeneralInformation from './GeneralInformation.vue';
 import Parties from './Parties.vue';
 import Theses from './Theses.vue';
+import Links from './Links.vue';
 import DownloadButton from './DownloadButton.vue';
 import StorageButtons from './StorageButtons.vue';
 
@@ -42,6 +44,7 @@ export default {
         },
         parties: [],
         theses: [],
+        links: [],
       },
     };
   },
@@ -50,6 +53,7 @@ export default {
     GeneralInformation,
     Parties,
     Theses,
+    Links,
     DownloadButton,
     StorageButtons,
   },
@@ -65,6 +69,7 @@ export default {
         },
         parties: [],
         theses: [],
+        links: [],
       });
     },
   },
