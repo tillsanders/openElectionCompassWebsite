@@ -30,7 +30,7 @@
             </template>
           </Field-Input>
           <button type="submit" :disabled="invalid">
-            <Icon name="check" /><span>Save</span>
+            <Icon name="check" /><span>{{ $t('save') }}</span>
           </button>
         </form>
       </ValidationObserver>
@@ -42,7 +42,6 @@
 import { ValidationObserver } from 'vee-validate';
 import Modal from '../../Modal.vue';
 import FieldInput from '../../fields/FieldInput.vue';
-import FieldFile from '../../fields/FieldFile.vue';
 
 export default {
   name: 'LanguageEditor',
@@ -59,7 +58,6 @@ export default {
   components: {
     Modal,
     FieldInput,
-    FieldFile,
     ValidationObserver,
   },
   mounted() {
@@ -70,6 +68,7 @@ export default {
       'en-US': {
         'add-language': 'Add language',
         'edit-language': 'Edit language',
+        'save': 'Save',
         fields: {
           name: {
             name: 'Name',
@@ -86,6 +85,7 @@ export default {
       'de-DE': {
         'add-language': 'Sprache hinzufügen',
         'edit-language': 'Sprache bearbeiten',
+        'save': 'Speichern',
         fields: {
           name: {
             name: 'Name',
