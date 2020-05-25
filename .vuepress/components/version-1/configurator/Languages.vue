@@ -64,7 +64,7 @@ export default {
   methods: {
     add() {
       this.$set(this, 'language', {
-        uuid: null, // indicates, that this thesis is not yet present in the theses array
+        uuid: null, // indicates, that this language is not yet present in the languages array
         name: '',
         code: '',
       });
