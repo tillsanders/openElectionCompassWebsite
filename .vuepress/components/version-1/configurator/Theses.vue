@@ -39,7 +39,7 @@
             <Icon name="edit" /><span>{{ $t('edit') }}</span>
           </button>
           <button @click="remove(thesis)" class="small">
-            <Icon name="trash" /><span>{{ $('remove') }}</span>
+            <Icon name="trash" /><span>{{ $t('remove') }}</span>
           </button>
         </SlickItem>
       </SlickList>
