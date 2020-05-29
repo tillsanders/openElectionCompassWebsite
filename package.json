@@ -4,9 +4,12 @@
   "description": "Website and documentation for the openElectionCompass project.",
   "main": "index.js",
   "dependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/vue-fontawesome": "^0.1.9",
+    "husky": "^3.1.0",
     "uuid": "^3.4.0",
     "vee-validate": "^3.2.5",
     "vue-i18n": "^8.17.7",
@@ -18,12 +21,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://tillsanders@github.com/tillsanders/openElectionCompassWebsite.git"
+    "url": "https://github.com/open-election-compass/website.git"
   },
   "author": "Till Sanders <mail@till-sanders.de>",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/tillsanders/openElectionCompassWebsite/issues"
+    "url": "https://github.com/open-election-compass/website/issues"
   },
-  "homepage": "https://github.com/tillsanders/openElectionCompassWebsite#readme"
+  "homepage": "https://open-election-compass.com",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
 }
