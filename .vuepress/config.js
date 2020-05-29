@@ -57,7 +57,7 @@ module.exports = {
           {
             text: 'Community',
             items: [
-              { text: 'GitHub', link: 'https://github.com/tillsanders/openElectionCompass' },
+              { text: 'GitHub', link: 'https://github.com/open-election-compass/client' },
               { text: 'Chat / Forum', link: 'https://spectrum.chat/openelectioncompass' },
               { text: 'E-Mail Newsletter', link: 'http://eepurl.com/gRApTD' },
             ]
@@ -142,7 +142,7 @@ module.exports = {
           {
             text: 'Gemeinschaft',
             items: [
-              { text: 'GitHub', link: 'https://github.com/tillsanders/openElectionCompass' },
+              { text: 'GitHub', link: 'https://github.com/open-election-compass/client' },
               { text: 'Chat / Forum', link: 'https://spectrum.chat/openelectioncompass' },
               { text: 'E-Mail Newsletter', link: 'http://eepurl.com/gRApTD' },
             ]
