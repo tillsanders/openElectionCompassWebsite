@@ -65,8 +65,8 @@ module.exports = {
           {
             text: 'Demos',
             items: [
-              { text: 'Hogwarts Demo', link: 'https://tillsanders.github.io/openElectionCompass/index.html' },
-              { text: 'Kommunalwahl Lüdenscheid 2020', link: 'https://tillsanders.github.io/openElectionCompass/demo-luedenscheid.html' },
+              { text: 'Hogwarts Demo', link: 'https://open-election-compass.github.io/client/index.html' },
+              { text: 'Kommunalwahl Lüdenscheid 2020', link: 'https://open-election-compass.github.io/client/demo-luedenscheid.html' },
             ]
           },
           {
@@ -150,8 +150,8 @@ module.exports = {
           {
             text: 'Demos',
             items: [
-              { text: 'Hogwarts Demo', link: 'https://tillsanders.github.io/openElectionCompass/index.html' },
-              { text: 'Kommunalwahl Lüdenscheid 2020', link: 'https://tillsanders.github.io/openElectionCompass/demo-luedenscheid.html' },
+              { text: 'Hogwarts Demo', link: 'https://open-election-compass.github.io/client/index.html' },
+              { text: 'Kommunalwahl Lüdenscheid 2020', link: 'https://open-election-compass.github.io/client/demo-luedenscheid.html' },
             ]
           },
           {
