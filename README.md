@@ -3,7 +3,7 @@ home: true
 heroImage: /oec-hero.png
 actionText: Get Started →
 actionLink: /guide/organisation/01-introduction.html
-footer: MIT Licensed | Copyright © 2019-present Till Sanders
+footer: GPL-3.0 Licensed | Copyright © 2019-present Till Sanders
 ---
 
 <div style="text-align: center">
@@ -18,7 +18,12 @@ be the first to be production ready. Sign up for our [newsletter](http://eepurl.
 <div class="features">
   <div class="feature">
     <h2>Free & Open Source</h2>
-    <p>As open and transparent as our democracies should be. Available for free under the <a href="https://github.com/tillsanders/openElectionCompass/blob/master/LICENSE" rel="noindex,nofollow">MIT license</a>.</p>
+    <p>
+      As open and transparent as our democracies should be. Available for free under the
+      <a href="https://github.com/open-election-compass/client/blob/master/LICENSE" rel="noindex,nofollow">
+        GPL 3.0 license
+      </a>.
+    </p>
   </div>
   <div class="feature">
     <h2>Easy to use</h2>
