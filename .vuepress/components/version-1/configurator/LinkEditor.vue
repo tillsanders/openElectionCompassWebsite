@@ -41,7 +41,7 @@
 <script>
 import { ValidationObserver } from 'vee-validate';
 import FieldInput from '../../fields/FieldInput.vue';
-import LanguageSwitch from './LanguageSwitch.vue';
+import LanguageSwitch from '../../LanguageSwitch.vue';
 import Modal from '../../Modal.vue';
 
 export default {

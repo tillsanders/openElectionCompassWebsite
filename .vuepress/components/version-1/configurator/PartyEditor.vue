@@ -75,7 +75,7 @@ import { ValidationObserver } from 'vee-validate';
 import Modal from '../../Modal.vue';
 import FieldInput from '../../fields/FieldInput.vue';
 import FieldFile from '../../fields/FieldFile.vue';
-import LanguageSwitch from './LanguageSwitch.vue';
+import LanguageSwitch from '../../LanguageSwitch.vue';
 
 export default {
   name: 'PartyEditor',

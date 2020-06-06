@@ -10,9 +10,9 @@
 <script>
   import { library } from '@fortawesome/fontawesome-svg-core'
   import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-  import { faBars, faCheck, faCogs, faDownload, faEdit, faHistory, faPlus, faTimes, faTrash, faUpload } from '@fortawesome/free-solid-svg-icons';
+  import { faBars, faCheck, faCogs, faDownload, faEdit, faFile, faHistory, faPlus, faTimes, faTrash, faUpload } from '@fortawesome/free-solid-svg-icons';
 
-  library.add(faBars, faCheck, faCogs, faDownload, faEdit, faHistory, faPlus, faTimes, faTrash, faUpload);
+  library.add(faBars, faCheck, faCogs, faDownload, faEdit, faFile, faHistory, faPlus, faTimes, faTrash, faUpload);
 
   export default {
 

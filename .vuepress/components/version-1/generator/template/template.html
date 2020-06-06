@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="<%= it.defaultLanguage.code %>">
+  <head>
+    <meta charset="utf-8">
+    <title><%= it.title[it.defaultLanguage.uuid] %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <% it.languages.forEach(({ code, uuid }) => { %>
+      <meta name="description" lang="<%= code %>" content="<%= it.description[uuid] %>">
+    <% }) %>
+    <meta property="og:title" content="<%= it.title[it.defaultLanguage.uuid] %>">
+    <meta property="og:description" content="<%= it.description[it.defaultLanguage.uuid] %>">
+    <% if (it.openGraphImage) { %>
+      <meta property="og:image" content="<%= it.openGraphImage %>">
+    <% } %>
+    <% if (it.openGraphUrl) { %>
+      <meta property="og:url" content="<%= it.openGraphUrl %>">
+    <% } %>
+    <link rel="icon" type="image/svg+xml" href="<%= it.faviconVector %>">
+    <link rel="alternate icon" type="image/png" sizes="32x32" href="<%= it.faviconPixel %>">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="<%= it.faviconApple %>">
+    <meta name="theme-color" content="#d69e2e">
+    <meta name="generator" content="OpenElectionCompass">
+  </head>
+  <body>
+    <div id="open-election-compass">
+      <open-election-compass load-tag="#oec-content" />
+    </div>
+    <script>
+      <%~ it.library %>
+    </script>
+    <script type="application/json" id="oec-content">
+      <%~ it.configuration %>
+    </script>
+  </body>
+</html>

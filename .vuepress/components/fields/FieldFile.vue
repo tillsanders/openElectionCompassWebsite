@@ -24,13 +24,25 @@
           @click="$emit('change', null)"
           class="small clear"
         >
-          Clear image
+          {{ $t('clear') }}
         </button>
       </ValidationProvider>
     </div>
     <div class="preview">
-      <img v-if="value" :src="value" />
-      <div v-else class="placeholder">No image</div>
+      <div
+        v-if="preview === 'image'"
+        class="preview__image"
+      >
+        <img v-if="value" :src="value" />
+        <div v-else class="placeholder">{{ $t('preview.image.empty') }}</div>
+      </div>
+      <div
+        v-else-if="preview === 'configuration'"
+        class="preview__configuration"
+      >
+        <Icon name="file" v-if="value" />
+        <div v-else class="placeholder">{{ $t('preview.configuration.empty') }}</div>
+      </div>
     </div>
   </div>
 </template>
@@ -72,6 +84,23 @@ export default {
       type: String,
       default: '',
     },
+    preview: {
+      type: String,
+      default: 'image',
+      validator(value) {
+        return ['image', 'configuration'].includes(value);
+      },
+    },
+    returnType: {
+      type: String,
+      default: 'data-url',
+      validator(value) {
+        return ['data-url', 'text'].includes(value);
+      },
+    }
+  },
+  mounted() {
+    this.$i18n.locale = this.$lang;
   },
   methods: {
     upload(event) {
@@ -83,12 +112,42 @@ export default {
       reader.onload = () => {
         this.$emit('change', reader.result);
       };
-      reader.readAsDataURL(file);
+      if (this.returnType === 'data-url') {
+        reader.readAsDataURL(file);
+      } else if (this.returnType === 'text') {
+        reader.readAsText(file);
+      }
     },
   },
   components: {
     ValidationProvider,
   },
+  i18n: {
+    messages: {
+      'en-US': {
+        clear: 'Clear',
+        preview: {
+          image: {
+            empty: 'No image',
+          },
+          configuration: {
+            empty: 'No file',
+          },
+        },
+      },
+      'de-DE': {
+        clear: 'Leeren',
+        preview: {
+          image: {
+            empty: 'Keine Grafik',
+          },
+          configuration: {
+            empty: 'Keine Datei',
+          },
+        },
+      }
+    }
+  }
 };
 </script>
 
@@ -103,15 +162,28 @@ export default {
     grid-column: 1;
     grid-row: 1;
   }
-  .field .preview {
+  .preview {
     grid-column: 2;
     grid-row: 1;
-  }
-  .placeholder {
     background-color: #F2F2F2;
     height: 200px;
     width: 200px;
     border-radius: 3px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .preview__configuration {
+    text-align: center;
+    grid-column: 0;
+    grid-row: 0;
+  }
+  .preview__configuration .icon {
+    font-size: 3rem;
+  }
+  .placeholder {
     padding: 1rem;
     text-align: center;
     font-style: italic;
@@ -119,7 +191,7 @@ export default {
     box-sizing: border-box;
   }
   .clear {
-    margin-top: 0.5rem;
+    margin-top: 1.5rem;
   }
   label {
     display: block;

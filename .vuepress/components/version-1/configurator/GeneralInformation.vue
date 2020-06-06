@@ -59,7 +59,7 @@
 <script>
 import FieldInput from '../../fields/FieldInput.vue';
 import FieldTextarea from '../../fields/FieldTextarea.vue';
-import LanguageSwitch from './LanguageSwitch.vue';
+import LanguageSwitch from '../../LanguageSwitch.vue';
 
 export default {
   name: 'GeneralInformation',

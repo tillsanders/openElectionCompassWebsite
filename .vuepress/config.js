@@ -49,7 +49,7 @@ module.exports = {
                 'text': 'Version 1',
                 items: [
                   { text: 'Configuration Editor', link: '/configurator/version-1/configuration-editor' },
-                  { text: 'HTML Generator', link: '/configurator/version-1/embed-code' },
+                  { text: 'HTML Generator', link: '/configurator/version-1/html-generator' },
                 ],
               },
             ],
@@ -134,7 +134,7 @@ module.exports = {
                 'text': 'Version 1',
                 items: [
                   { text: 'Konfigurations-Editor', link: '/de/configurator/version-1/configuration-editor' },
-                  { text: 'HTML-Generator', link: '/configurator/version-1/embed-code' },
+                  { text: 'HTML-Generator', link: '/configurator/version-1/html-generator' },
                 ],
               },
             ],

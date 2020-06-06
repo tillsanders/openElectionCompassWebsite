@@ -28,10 +28,11 @@
 <script>
 import { ValidationProvider } from 'vee-validate';
 import { extend } from 'vee-validate';
-import { alpha, length, min, regex, required } from 'vee-validate/dist/rules';
+import { alpha, length, max, min, regex, required } from 'vee-validate/dist/rules';
 
 extend('alpha', alpha);
 extend('length', length);
+extend('max', max);
 extend('min', min);
 extend('regex', regex);
 extend('required', required);
