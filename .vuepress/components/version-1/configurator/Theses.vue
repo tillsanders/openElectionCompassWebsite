@@ -101,7 +101,7 @@ export default {
         if (!thesis.positions[party.uuid]) {
           this.$set(thesis.positions, party.uuid, {
             position: null,
-            explanation: null,
+            explanation: {},
           });
         }
       });
