@@ -23,7 +23,7 @@
   </head>
   <body>
     <div id="open-election-compass">
-      <open-election-compass load-tag="#oec-content" />
+      <open-election-compass load-tag="#oec-content"<%= it.kioskMode == 'on' ? ' kiosk-mode' : '' %> />
     </div>
     <script>
       <%~ it.library %>

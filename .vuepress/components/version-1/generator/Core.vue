@@ -14,6 +14,21 @@
       />
     </fieldset>
     <fieldset v-if="configuration">
+      <legend>{{ $t('options') }}</legend>
+      <FieldSelect
+        alias="kioskMode"
+        :name="$t('fields.kioskMode.name')"
+        type="text"
+        rules=""
+        v-model="store.kioskMode"
+        :options="[
+          { value: 'off', name: $t('fields.kioskMode.options.off') },
+          { value: 'on', name: $t('fields.kioskMode.options.on') },
+        ]"
+        :description="$t('fields.kioskMode.description')"
+      />
+    </fieldset>
+    <fieldset v-if="configuration">
       <legend>{{ $t('seo') }}</legend>
       <LanguageSwitch :languages="languages" :values="store.title" v-slot="{selected}">
         <FieldInput
@@ -78,6 +93,7 @@ import de from 'vee-validate/dist/locale/de.json';
 import en from 'vee-validate/dist/locale/en.json';
 import FieldFile from '../../fields/FieldFile';
 import FieldInput from '../../fields/FieldInput';
+import FieldSelect from '../../fields/FieldSelect';
 import LanguageSwitch from '../../LanguageSwitch';
 import template from '!!raw-loader!./template/template.html';
 import library from '!!raw-loader!./template/open-election-compass.umd.min.js';
@@ -96,6 +112,7 @@ export default {
   components: {
     FieldFile,
     FieldInput,
+    FieldSelect,
     LanguageSwitch,
     ValidationObserver,
   },
@@ -105,6 +122,7 @@ export default {
       store: {
         description: {},
         title: {},
+        kioskMode: 'off',
         openGraphImage: null,
         openGraphUrl: null,
       },
@@ -148,6 +166,7 @@ export default {
       const html = Eta.render(template, {
         languages: this.languages,
         defaultLanguage: this.languages[0],
+        kioskMode: this.store.kioskMode,
         title: this.store.title,
         description: this.store.description,
         openGraphImage: this.store.openGraphImage,
@@ -166,7 +185,8 @@ export default {
     messages: {
       'en-US': {
         file: '1. Upload configuration file',
-        seo: '2. Search engine settings',
+        options: '2. Options',
+        seo: '3. Search engine settings',
         download: 'Download',
         filename: 'election-compass.html',
         fields: {
@@ -179,6 +199,14 @@ export default {
             name: 'Description',
             description: 'The description is displayed as the excerpt in search results and in the preview of many social media platforms. Use it to advertise your service. 50 - 160 characters work best.',
             placeholder: 'The parties have declared their position – now it is your turn to vote on the most important political decisions for the years to come.'
+          },
+          kioskMode: {
+            name: 'Kiosk Mode',
+            description: 'Activate the Kiosk Mode if you want to display your election compass in a public place. The system will show an option to restart the election compass at any time and will do so automatically after a certain time of inactivity.',
+            options: {
+              off: 'disabled',
+              on: 'enabled',
+            },
           },
           openGraphImage: {
             name: 'Open Graph Image',
@@ -198,7 +226,8 @@ export default {
       },
       'de-DE': {
         file: '1. Konfigurationsdatei hochladen',
-        seo: '2. Suchmaschinen-Einstellungen',
+        options: '2. Suchmaschinen-Einstellungen',
+        seo: '3. Suchmaschinen-Einstellungen',
         download: 'Herunterladen',
         filename: 'wahlkompass.html',
         fields: {
@@ -211,6 +240,14 @@ export default {
             name: 'Beschreibung',
             description: 'Die Beschreibung wird als Auszug in den Suchergebnissen und als Vorschau in sozialen Netzwerken angezeigt. Verwende sie um dein Angebot zu bewerben. 50 - 160 Zeichen funktionieren am besten.',
             placeholder: 'Die Parteien haben ihre Positionen bestimmt – nun bist du an der Reihe! Stimme ab über die wichtigsten politischen Entscheidungen der kommenden Jahre.'
+          },
+          kioskMode: {
+            name: 'Kiosk Modus',
+            description: 'Aktiviere den Kiosk Modus, falls du deinen Wahlkompass an einem öffentlichen Ort ausstellen möchtest. Das System wird eine Möglichkeit zum Zurücksetzen des Wahlkompasses anbieten und diese nach einer bestimmten Inaktivitätsperiode auch automatisch ausführen.',
+            options: {
+              off: 'disabled',
+              on: 'enabled',
+            },
           },
           openGraphImage: {
             name: 'Open Graph Grafik',
