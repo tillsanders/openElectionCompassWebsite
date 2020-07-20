@@ -99,6 +99,13 @@ Einsatz sein und in Q2 2020 bereitstehen. Melde dich für unseren
     <h2>Moderne Architektur</h2>
     <p>Basierend auf beliebten Technologien – Vue.js, SASS, Nuxt.js, GitHub, Jest.</p>
   </div>
+  <div class="feature">
+    <h2>Kiosk Modus</h2>
+    <p>
+      Verwende den Kiosk Modus um ein Terminal an einem öffentlichen Ort anzubieten. Sitzungen
+      werden automatisch beendet.
+    </p>
+  </div>
 </div>
 
 ## Roadmap :seedling:
@@ -112,13 +119,6 @@ in Planung. Aber eines ist sicher – wir sind noch lange nicht fertig:
     <h2>Null-Cookie Analyse</h2>
     <p>
       Benutzer:innen spenden ihre Antworten zur wissenschaftlichen und statistischen Auswertung.
-    </p>
-  </div>
-  <div class="feature">
-    <h2>Kiosk Modus</h2>
-    <p>
-      Verwende den Kiosk Modus um ein Terminal an einem öffentlichen Ort anzubieten. Sitzungen
-      werden automatisch beendet.
     </p>
   </div>
   <div class="feature">

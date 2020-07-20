@@ -69,6 +69,10 @@ be the first to be production ready. Sign up for our [newsletter](http://eepurl.
     <h2>Modern architecture</h2>
     <p>Built with technologies developers love – Vue.js, SASS, Nuxt.js, GitHub, Jest.</p>
   </div>
+  <div class="feature">
+    <h2>Kiosk Mode</h2>
+    <p>Use the Kiosk mode to set up a terminal in a public place. Sessions will be destroyed automatically.</p>
+  </div>
 </div>
 
 ## Roadmap :seedling:
@@ -81,10 +85,6 @@ thing is certain – we're not done yet. Take a look:
   <div class="feature">
     <h2>Zero-Cookie Analytics</h2>
     <p>Let people donate their answers for scientific research and statistics.</p>
-  </div>
-  <div class="feature">
-    <h2>Kiosk Mode</h2>
-    <p>Use the Kiosk mode to set up a terminal in a public place. Sessions will be destroyed automatically.</p>
   </div>
   <div class="feature">
     <h2>More answer styles</h2>
