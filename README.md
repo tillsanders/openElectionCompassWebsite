@@ -11,8 +11,9 @@ footer: GPL-3.0 Licensed | Copyright © 2019-present Till Sanders
 </div>
 
 ::: warning PROJECT STATUS
-This project is currently under heavy development. Version 1.0 will be release in Q2 2020 and will
-be the first to be production ready. Sign up for our [newsletter](http://eepurl.com/gRApTD) to stay in the loop.
+This project is currently under heavy development. Version 0.1.0 will be released in Q3 2020 and
+will be the first to be production ready. Sign up for our [newsletter](http://eepurl.com/gRApTD) to
+stay in the loop.
 :::
 
 <div class="features">
