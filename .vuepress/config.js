@@ -63,10 +63,21 @@ module.exports = {
             ]
           },
           {
-            text: 'Demos',
+            text: 'Demos & Archive',
             items: [
-              { text: 'Hogwarts Demo', link: 'https://open-election-compass.github.io/client/index.html' },
-              { text: 'Kommunalwahl Lüdenscheid 2020', link: 'https://open-election-compass.github.io/client/demo-luedenscheid.html' },
+              {
+                text: 'Demos',
+                items: [
+                  { text: 'Hogwarts Demo', link: 'https://open-election-compass.github.io/client/index.html' },
+                  { text: 'Kommunalwahl Lüdenscheid 2020', link: 'https://open-election-compass.github.io/client/demo-luedenscheid.html' },
+                ],
+              },
+              {
+                text: 'Archive',
+                items: [
+                  { text: '2020', link: '/archive/2020' },
+                ],
+              },
             ]
           },
           {
@@ -148,10 +159,21 @@ module.exports = {
             ]
           },
           {
-            text: 'Demos',
+            text: 'Demos & Archiv',
             items: [
-              { text: 'Hogwarts Demo', link: 'https://open-election-compass.github.io/client/index.html' },
-              { text: 'Kommunalwahl Lüdenscheid 2020', link: 'https://open-election-compass.github.io/client/demo-luedenscheid.html' },
+              {
+                text: 'Demos',
+                items: [
+                  { text: 'Hogwarts Demo', link: 'https://open-election-compass.github.io/client/index.html' },
+                  { text: 'Kommunalwahl Lüdenscheid 2020', link: 'https://open-election-compass.github.io/client/demo-luedenscheid.html' },
+                ],
+              },
+              {
+                text: 'Archiv',
+                items: [
+                  { text: '2020', link: '/archive/2020' },
+                ],
+              },
             ]
           },
           {
