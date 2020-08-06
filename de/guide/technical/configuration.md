@@ -22,6 +22,33 @@ Konfigurationsdatei leicht bestimmt werden kann, gibt es ein entsprechendes Attr
 }
 ```
 
+## Algorithmus
+
+Im Laufe der Zeit wurden verschiedene Algorithmen und Antwort-Stile entwickelt. Da der
+OpenElectionCompass entwickelt wurde um das Verhalten der populärsten Voting Advice Application
+Deutschlands zu imitieren, besteht der Standard-Stil (und der einzige aktuell verfügbare) aus drei
+Buttons und dem sogenannten Cityblock-Algorithmus.
+
+### Verfügbare Algorithmen und Antwort-Stile
+
+- `cityblock/accept-neutral-reject`:
+  - Standard
+  - Buttons: 3 – Zustimmen, Neutral, Ablehnen
+  - Übereinstimmung/Algorithmus: Cityblock
+- `cityblock/accept-partly-reject`:
+  - Funktioniert genau so, wie der vorherige, allerdings ist der Neutral-Button mit 'Teilweise' beschriftet.
+  - Buttons: 3 – Zustimmen, Teilweise, Ablehnen
+  - Übereinstimmung/Algorithmus: Cityblock
+
+### Konfigurationsbeispiel
+
+```json
+{
+  "version": "1",
+  "algorithm": "cityblock/accept-neutral-reject"
+}
+```
+
 ## Mehrsprachigkeit
 
 Eine einzelne Konfigurationsdatei enthält sämtliche Sprachen, die der Wahlkompass anbieten soll. In
@@ -60,7 +87,7 @@ welche im Startbereich des Wahlkompasses angezeigt werden.
 
 ```json
 {
-  // version, languages, etc.
+  // version, languages, algorithm, etc.
   // ...
   "title": {
     "de": "Hogwarts Schülervertretung 1993",

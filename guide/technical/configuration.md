@@ -23,6 +23,33 @@ version property, so that the version used can easily be determined:
 }
 ```
 
+## Algorithm
+
+There are several algorithms and answer styles that evolved over time. Since the OpenElectionCompass
+was crafted to mimic the behaviour of the most popular voting advice application in Germany, the
+default style (and the only one available right now) is using three buttons and the so called
+cityblock algorithm.
+
+### Available algorithms and answer styles
+
+- `cityblock/accept-neutral-reject`:
+  - Default
+  - Buttons: 3 – Accept, Neutral, Reject
+  - Matching algorithm: Cityblock
+- `cityblock/accept-partly-reject`:
+  - Works exactly like the previous one, but the neutral button is labelled 'partly' instead.
+  - Buttons: 3 – Accept, Partly, Reject
+  - Matching algorithm: Cityblock
+
+### Configuration example
+
+```json
+{
+  "version": "1",
+  "algorithm": "cityblock/accept-neutral-reject"
+}
+```
+
 ## Internationalization
 
 A single configuration file contains all the languages that the election compass should offer. The
@@ -60,7 +87,7 @@ displayed in the start section of every election compass.
 
 ```json
 {
-  // version, languages, etc.
+  // version, languages, algorithm, etc.
   // ...
   "title": {
     "en": "Hogwarts Head Boy and Girl Elections 1993",
