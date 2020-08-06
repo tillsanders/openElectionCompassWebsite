@@ -55,7 +55,8 @@ export default {
     save(store) {
       const configuration = {};
       configuration.version = '1';
-      configuration.languages = this.store.languages.map(language => {
+      configuration.algorithm = store.algorithm;
+      configuration.languages = store.languages.map(language => {
         return {
           name: language.name,
           code: language.code,
@@ -67,7 +68,7 @@ export default {
         heading: this.keyTranslationsByLanguageCode(store.languages, store.introduction.heading),
         text: this.keyTranslationsByLanguageCode(store.languages, store.introduction.text),
       };
-      configuration.parties = this.store.parties.map(party => {
+      configuration.parties = store.parties.map(party => {
         return {
           alias: party.alias,
           name: this.keyTranslationsByLanguageCode(store.languages, party.name),
@@ -76,9 +77,9 @@ export default {
           logo: party.logo,
         };
       });
-      configuration.theses = this.store.theses.map(thesis => {
+      configuration.theses = store.theses.map(thesis => {
         const positions = {};
-        this.store.parties.forEach(party => {
+        store.parties.forEach(party => {
           if (thesis.positions[party.uuid]) {
             positions[party.alias] = {
               position: thesis.positions[party.uuid].position,
@@ -92,7 +93,7 @@ export default {
           positions,
         };
       });
-      configuration['footer-links'] = this.store.links.map(link => {
+      configuration['footer-links'] = store.links.map(link => {
         return {
           text: this.keyTranslationsByLanguageCode(store.languages, link.text),
           href: this.keyTranslationsByLanguageCode(store.languages, link.href),

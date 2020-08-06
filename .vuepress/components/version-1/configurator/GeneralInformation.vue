@@ -52,12 +52,28 @@
           :description="$t('fields.introduction-text.description')"
         />
       </LanguageSwitch>
+
+      <FieldSelect
+        alias="algorithm"
+        :name="$t('fields.algorithm.name')"
+        rules="required"
+        :options="[
+          { value: 'cityblock/accept-neutral-reject', name: $t('fields.algorithm.options.cityblock-accept-neutral-reject') },
+          { value: 'cityblock/accept-partly-reject', name: $t('fields.algorithm.options.cityblock-accept-partly-reject') },
+        ]"
+        v-model="store.algorithm"
+      >
+        <template v-slot:description>
+          <span v-html="$t('fields.algorithm.description')" />
+        </template>
+      </FieldSelect>
     </fieldset>
   </div>
 </template>
 
 <script>
 import FieldInput from '../../fields/FieldInput.vue';
+import FieldSelect from '../../fields/FieldSelect.vue';
 import FieldTextarea from '../../fields/FieldTextarea.vue';
 import LanguageSwitch from '../../LanguageSwitch.vue';
 
@@ -71,6 +87,7 @@ export default {
   },
   components: {
     FieldInput,
+    FieldSelect,
     FieldTextarea,
     LanguageSwitch,
   },
@@ -102,6 +119,14 @@ export default {
             placeholder: 'All 9 parties that are participating in the election have ...',
             description: 'Provide a short introduction to your election compass. Don\'t add explanations on how it works, rather tell your audience, who you are and why you are doing this, how many parties participated, etc. About 2 - 5 sentences.',
           },
+          algorithm: {
+            name: 'Algorithm',
+            description: 'Select the algorithm and answer style you want for your parties and users. Go with the default if you like, or learn more about the available stiles <a href="http://localhost:8081/guide/technical/configuration.html#algorithm" target="_blank">here</a>.',
+            options: {
+              'cityblock-accept-neutral-reject': 'Cityblock, 3 options: Accept/Neutral/Reject (Default)',
+              'cityblock-accept-partly-reject': 'Cityblock, 3 options: Accept/Partly/Reject',
+            }
+          }
         }
       },
       'de-DE': {
@@ -127,6 +152,14 @@ export default {
             placeholder: 'Alle 9 zur Wahl aufgestellten Parteien haben an diesem Wahlkompass ...',
             description: 'Gib eine kurze Einleitung in deinen Wahlkompass. Erläutere an dieser Stelle nicht die Bedienung, sondern erkläre deinen Besucher:innen, wer du bist und warum du das tust, wieviele Parteien teilnehmen, etc. Ungefähr 2 - 5 Sätze.',
           },
+          algorithm: {
+            name: 'Algorithmus',
+            description: 'Wähle den Algorithmus und Antwort-Stil für die Parteien und Nutzer:innen. Nimm den Standard, wenn du magst, oder informiere dich <a href="http://localhost:8081/de/guide/technical/configuration.html#algorithmus" target="_blank">hier</a> über die verschiedenen Stile.',
+            options: {
+              'cityblock-accept-neutral-reject': 'Cityblock, 3 Optionen: Zustimmen/Neutral/Ablehnen (Standard)',
+              'cityblock-accept-partly-reject': 'Cityblock, 3 Optionen: Zustimmen/Teilweise/Ablehnen',
+            }
+          }
         }
       }
     }

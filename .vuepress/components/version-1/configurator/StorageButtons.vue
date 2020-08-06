@@ -72,6 +72,10 @@ export default {
 
       this.$nextTick(() => {
         const configuration = JSON.parse(json);
+
+        this.store.version = configuration.version;
+        this.store.algorithm = configuration.algorithm;
+
         configuration.languages.forEach((language) => {
           this.store.languages.push({
             uuid: uuid(),
