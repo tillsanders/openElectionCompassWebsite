@@ -96,7 +96,7 @@ export default {
     publish() {
       this.$refs.field.validate(this.cache).then(({valid}) => {
         if (valid) {
-          this.$emit('change', this.cache);
+          this.$emit('change', this.cache.trim());
         } else {
           this.$emit('change', '');
         }
