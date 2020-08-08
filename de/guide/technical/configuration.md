@@ -257,6 +257,14 @@ Erkläre, was umgesetzt werden soll, aber gehe nicht ins Detail, wie dies erreic
 
 Beispiel: `"Die Bundesregierung soll politische Bildung stärker finanziell unterstützen."`
 
+Du kannst Definitionen schwieriger Begriffe hinzufügen, indem du diese in eckige Klammern fast und
+eine Erläuterung direkt anschließend in spitzen Klammern.
+
+Beispiel: `"Die Bundesregierung soll [Osmose]<Der gerichtete Fluss von Teilchen durch eine selektiv- oder semipermeable Trennschicht.> regulieren."`
+
+Der Begriff wird in der Darstellung der These mit einer gepunkteten Linie markiert und die
+Definition beim Überfahren mit der Maus oder per Tap angezeigt.
+
 ### theses[].positions[]
 
 Jede These hat eine Liste (Objekt) an Positionen (`positions`) mit Antworten der Parteien:

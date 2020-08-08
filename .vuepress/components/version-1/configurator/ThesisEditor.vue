@@ -120,7 +120,7 @@ export default {
           statement: {
             name: 'Statement',
             placeholder: 'The government should increase financial support of political education.',
-            description: 'The actual thesis. Choose your words carefully! The thesis needs to be balanced and specific enough. Explain what should be implemented, but don\'t be too detailed about how this might be achieved.',
+            description: 'The actual thesis. Choose your words carefully! The thesis needs to be balanced and specific enough. Explain what should be implemented, but don\'t be too detailed about how this might be achieved. You can add definitions for difficult terms by wrapping them in square brackets and adding an explanation in angle brackets immediately afterwards. Example: [Osmosis]<The spontaneous net movement of solvent molecules.>',
           },
           position: {
             name: 'Position of {short} ({name})',
@@ -149,7 +149,7 @@ export default {
           statement: {
             name: 'These',
             placeholder: 'Die Bundesregierung soll politische Bildung stärker finanziell unterstützen.',
-            description: 'Die eigentliche These. Wähle deine Worte mit Bedacht! Eine These muss ausgewogen und präzise sein. Erkläre, was umgesetzt werden soll, aber gehe nicht ins Detail, wie dies erreicht werden könnte.',
+            description: 'Die eigentliche These. Wähle deine Worte mit Bedacht! Eine These muss ausgewogen und präzise sein. Erkläre, was umgesetzt werden soll, aber gehe nicht ins Detail, wie dies erreicht werden könnte. Du kannst Definitionen schwieriger Begriffe hinzufügen, indem du diese in eckige Klammern fast und eine Erläuterung direkt anschließend in spitzen Klammern. Beispiel: [Osmose]<Der gerichtete Fluss von Teilchen durch eine selektiv- oder semipermeable Trennschicht.>',
           },
           position: {
             name: 'Position der {short} ({name})',

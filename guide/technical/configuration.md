@@ -256,6 +256,14 @@ Explain what should be implemented, but don't be too detailed about how this mig
 
 Example: `"The government should increase financial support of political education."`
 
+You can add definitions for difficult terms by wrapping them in square brackets and adding an
+explanation in angle brackets immediately afterwards.
+
+Example: `"The government should regulate [Osmosis]<The spontaneous net movement of solvent molecules.> immediately."`
+
+The term is marked with a dotted line in the presentation of the thesis and the definition displayed
+on mouseover or tap.
+
 ### theses[].positions[]
 
 Every thesis has a `positions` key containing an array of answers:
