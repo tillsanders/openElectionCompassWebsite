@@ -36,7 +36,7 @@ export default {
     return {
       store: {
         languages: [{ uuid: uuid(), name: 'English', code: 'en' }],
-        algorithm: 'cityblock/accept-neutral-reject',
+        algorithm: 'cityblock/approve-neutral-reject',
         title: {},
         subtitle: {},
         introduction: {
@@ -62,7 +62,7 @@ export default {
     reset() {
       this.$set(this, 'store', {
         languages: [{ uuid: uuid(), name: 'English', code: 'en' }],
-        algorithm: 'cityblock/accept-neutral-reject',
+        algorithm: 'cityblock/approve-neutral-reject',
         title: {},
         subtitle: {},
         introduction: {

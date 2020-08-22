@@ -11,7 +11,7 @@ footer: 'Lizenz: GPL 3.0 | Copyright © 2019-present Till Sanders'
 </div>
 
 ::: warning PROJEKT STATUS
-Dieses Projekt befindet sich derzeit in der Entwicklung. Version 0.1.0 wird als erste bereit für den
+Dieses Projekt befindet sich derzeit in der Entwicklung. Version 1.0.0 wird als erste bereit für den
 Einsatz sein und in Q3 2020 bereitstehen. Melde dich für unseren
 [Newsletter](http://eepurl.com/gRApTD) an um auf dem Laufenden zu bleiben.
 :::
@@ -46,6 +46,12 @@ Einsatz sein und in Q3 2020 bereitstehen. Melde dich für unseren
     <p>
       Stelle ein und denselben Wahlkompass in mehreren Sprachen bereit um mehr Menschen zu
       erreichen.
+    </p>
+  </div>
+  <div class="feature">
+    <h2>Mehrere Algorithmen</h2>
+    <p>
+      Wähle aus verschiedenen Auswertungsalgorithmen und Antwort-Stilen – 3 Buttons oder doch 5?
     </p>
   </div>
   <div class="feature">
@@ -119,12 +125,6 @@ in Planung. Aber eines ist sicher – wir sind noch lange nicht fertig:
     <h2>Null-Cookie Analyse</h2>
     <p>
       Benutzer:innen spenden ihre Antworten zur wissenschaftlichen und statistischen Auswertung.
-    </p>
-  </div>
-  <div class="feature">
-    <h2>Weitere Antwortmöglichkeiten</h2>
-    <p>
-      Einige Untersuchungen legen nahe, dass fünf Antwortmöglichkeiten bessere Ergebnisse liefern.
     </p>
   </div>
   <div class="feature">

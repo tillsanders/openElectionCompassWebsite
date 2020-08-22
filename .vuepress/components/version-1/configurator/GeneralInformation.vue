@@ -58,8 +58,9 @@
         :name="$t('fields.algorithm.name')"
         rules="required"
         :options="[
-          { value: 'cityblock/accept-neutral-reject', name: $t('fields.algorithm.options.cityblock-accept-neutral-reject') },
-          { value: 'cityblock/accept-partly-reject', name: $t('fields.algorithm.options.cityblock-accept-partly-reject') },
+          { value: 'cityblock/approve-neutral-reject', name: $t('fields.algorithm.options.cityblock-approve-neutral-reject') },
+          { value: 'cityblock/approve-partly-reject', name: $t('fields.algorithm.options.cityblock-approve-partly-reject') },
+          { value: 'hybrid', name: $t('fields.algorithm.options.hybrid') },
         ]"
         v-model="store.algorithm"
       >
@@ -123,8 +124,9 @@ export default {
             name: 'Algorithm',
             description: 'Select the algorithm and answer style you want for your parties and users. Go with the default if you like, or learn more about the available stiles <a href="http://localhost:8081/guide/technical/configuration.html#algorithm" target="_blank">here</a>.',
             options: {
-              'cityblock-accept-neutral-reject': 'Cityblock, 3 options: Accept/Neutral/Reject (Default)',
-              'cityblock-accept-partly-reject': 'Cityblock, 3 options: Accept/Partly/Reject',
+              'cityblock-approve-neutral-reject': 'Cityblock, 3 options: Approve/Neutral/Reject (Default)',
+              'cityblock-approve-partly-reject': 'Cityblock, 3 options: Approve/Partly/Reject',
+              'hybrid': 'Hybrid, 5 options: Strongly Approve/Approve/Partly/Reject/Strongly Reject',
             }
           }
         }
@@ -156,8 +158,9 @@ export default {
             name: 'Algorithmus',
             description: 'Wähle den Algorithmus und Antwort-Stil für die Parteien und Nutzer:innen. Nimm den Standard, wenn du magst, oder informiere dich <a href="http://localhost:8081/de/guide/technical/configuration.html#algorithmus" target="_blank">hier</a> über die verschiedenen Stile.',
             options: {
-              'cityblock-accept-neutral-reject': 'Cityblock, 3 Optionen: Zustimmen/Neutral/Ablehnen (Standard)',
-              'cityblock-accept-partly-reject': 'Cityblock, 3 Optionen: Zustimmen/Teilweise/Ablehnen',
+              'cityblock-approve-neutral-reject': 'Cityblock, 3 Optionen: Zustimmen/Neutral/Ablehnen (Standard)',
+              'cityblock-approve-partly-reject': 'Cityblock, 3 Optionen: Zustimmen/Teilweise/Ablehnen',
+              'hybrid': 'Hybrid, 5 Optionen: Starke Zustimmung/Zustimmung/Neutral/Ablehnung/Starke Ablehnung',
             }
           }
         }

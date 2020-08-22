@@ -27,26 +27,32 @@ version property, so that the version used can easily be determined:
 
 There are several algorithms and answer styles that evolved over time. Since the OpenElectionCompass
 was crafted to mimic the behaviour of the most popular voting advice application in Germany, the
-default style (and the only one available right now) is using three buttons and the so called
-cityblock algorithm.
+default style is using three buttons and the so called cityblock algorithm.
 
 ### Available algorithms and answer styles
 
-- `cityblock/accept-neutral-reject`:
+- `cityblock/approve-neutral-reject`:
   - Default
-  - Buttons: 3 – Accept, Neutral, Reject
+  - Buttons: 3 – Approve, Neutral, Reject
   - Matching algorithm: Cityblock
-- `cityblock/accept-partly-reject`:
+  - [Demo](https://open-election-compass.github.io/client/index.html)
+- `cityblock/approve-partly-reject`:
   - Works exactly like the previous one, but the neutral button is labelled 'partly' instead.
-  - Buttons: 3 – Accept, Partly, Reject
+  - Buttons: 3 – Approve, Partly, Reject
   - Matching algorithm: Cityblock
+  - [Demo](https://open-election-compass.github.io/client/demo-luedenscheid.html)
+- `hybrid`:
+  - Provides more precise results, as more options are available and the direction is taken into account more during evaluation.
+  - Buttons: 5 – Strongly Agree, Agree, Neutral, Reject, Strongly Reject
+  - Matching algorithm: Hybrid
+  - [Demo](https://open-election-compass.github.io/client/demo-hybrid.html)
 
 ### Configuration example
 
 ```json
 {
   "version": "1",
-  "algorithm": "cityblock/accept-neutral-reject"
+  "algorithm": "cityblock/approve-neutral-reject"
 }
 ```
 

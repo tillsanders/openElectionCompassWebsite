@@ -70,6 +70,7 @@ module.exports = {
                 items: [
                   { text: 'Hogwarts Demo', link: 'https://open-election-compass.github.io/client/index.html' },
                   { text: 'Kommunalwahl Lüdenscheid 2020', link: 'https://open-election-compass.github.io/client/demo-luedenscheid.html' },
+                  { text: 'Hybrid Algorithm', link: 'https://open-election-compass.github.io/client/demo-hybrid.html' },
                 ],
               },
               {
@@ -166,6 +167,7 @@ module.exports = {
                 items: [
                   { text: 'Hogwarts Demo', link: 'https://open-election-compass.github.io/client/index.html' },
                   { text: 'Kommunalwahl Lüdenscheid 2020', link: 'https://open-election-compass.github.io/client/demo-luedenscheid.html' },
+                  { text: 'Hybrid Algorithmus', link: 'https://open-election-compass.github.io/client/demo-hybrid.html' },
                 ],
               },
               {

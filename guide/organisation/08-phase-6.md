@@ -4,6 +4,7 @@
 
 Now it is time to let the parties answer and position themselves.
 
+- First, decide on the algorithm you want to calculate the matches with. This will also determine, how many possible answers there will be. For example: the default cityblock algorithm uses three buttons: Approve, Neutral and Reject. The hybrid algorithm is more precise and uses five buttons. You can read more about the available algorithms in the [Technical Documentation > Algorithm](../technical/configuration.html#algorithm).
 - Send the theses to every party. Until we have a tool to collect answers, use an online form!
 - Make sure to also collect the logos (see the [Technical
   Guide](../technical/configuration.html#parties-logo)).

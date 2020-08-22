@@ -39,12 +39,7 @@
               :alias="`position-${party.alias}`"
               :name="$t('fields.position.name', { short: party.short[defaultLanguage], name: party.name[defaultLanguage] })"
               :rules="{}"
-              :options="[
-                { value: 'approve', name: $t('fields.position.options.approve') },
-                { value: 'neutral', name: $t('fields.position.options.neutral') },
-                { value: 'reject', name: $t('fields.position.options.reject') },
-                { value: 'skip', name: $t('fields.position.options.skip') },
-              ]"
+              :options="positionOptions"
               v-model="thesis.positions[party.uuid].position"
             />
             <LanguageSwitch :languages="store.languages" :values="thesis.positions[party.uuid].explanation" v-slot="{selected}">
@@ -93,6 +88,32 @@ export default {
     defaultLanguage() {
       return this.store.languages[0].uuid;
     },
+    positionOptions() {
+      if (this.store.algorithm === 'cityblock/approve-neutral-reject') {
+        return [
+          { value: 'approve', name: this.$t('fields.position.algorithms.cityblock-approve-neutral-reject.options.approve') },
+          { value: 'neutral', name: this.$t('fields.position.algorithms.cityblock-approve-neutral-reject.options.neutral') },
+          { value: 'reject', name: this.$t('fields.position.algorithms.cityblock-approve-neutral-reject.options.reject') },
+          { value: 'skip', name: this.$t('fields.position.algorithms.cityblock-approve-neutral-reject.options.skip') },
+        ];
+      } else if (this.store.algorithm === 'cityblock/approve-partly-reject') {
+        return [
+          { value: 'approve', name: this.$t('fields.position.algorithms.cityblock-approve-partly-reject.options.approve') },
+          { value: 'neutral', name: this.$t('fields.position.algorithms.cityblock-approve-partly-reject.options.partly') },
+          { value: 'reject', name: this.$t('fields.position.algorithms.cityblock-approve-partly-reject.options.reject') },
+          { value: 'skip', name: this.$t('fields.position.algorithms.cityblock-approve-partly-reject.options.skip') },
+        ];
+      } else if (this.store.algorithm === 'hybrid') {
+        return [
+          { value: 'strongly-approve', name: this.$t('fields.position.algorithms.hybrid.options.strongly-approve') },
+          { value: 'approve', name: this.$t('fields.position.algorithms.hybrid.options.approve') },
+          { value: 'neutral', name: this.$t('fields.position.algorithms.hybrid.options.neutral') },
+          { value: 'reject', name: this.$t('fields.position.algorithms.hybrid.options.reject') },
+          { value: 'strongly-reject', name: this.$t('fields.position.algorithms.hybrid.options.strongly-reject') },
+          { value: 'skip', name: this.$t('fields.position.algorithms.hybrid.options.skip') },
+        ];
+      }
+    },
   },
   components: {
     Modal,
@@ -124,12 +145,34 @@ export default {
           },
           position: {
             name: 'Position of {short} ({name})',
-            options: {
-              approve: 'Approve',
-              neutral: 'Neutral',
-              reject: 'Reject',
-              skip: 'No position'
-            }
+            algorithms: {
+              'cityblock-approve-neutral-reject': {
+                options: {
+                  approve: 'Approve',
+                  neutral: 'Neutral',
+                  reject: 'Reject',
+                  skip: 'No position',
+                },
+              },
+              'cityblock-approve-partly-reject': {
+                options: {
+                  approve: 'Approve',
+                  partly: 'Partly',
+                  reject: 'Reject',
+                  skip: 'No position',
+                },
+              },
+              'hybrid': {
+                options: {
+                  'strongly-approve': 'Strongly approve',
+                  approve: 'Approve',
+                  neutral: 'Neutral',
+                  reject: 'Reject',
+                  'strongly-reject': 'Strongly reject',
+                  skip: 'No position',
+                },
+              },
+            },
           },
           explanation: {
             name: 'Explanation of {short} ({name})'
@@ -153,12 +196,34 @@ export default {
           },
           position: {
             name: 'Position der {short} ({name})',
-            options: {
-              approve: 'Zustimmung',
-              neutral: 'Neutral',
-              reject: 'Ablehnung',
-              skip: 'Keine Position'
-            }
+            algorithms: {
+              'cityblock-approve-neutral-reject': {
+                options: {
+                  approve: 'Zustimmung',
+                  neutral: 'Neutral',
+                  reject: 'Ablehnung',
+                  skip: 'Keine Position',
+                },
+              },
+              'cityblock-approve-partly-reject': {
+                options: {
+                  approve: 'Zustimmung',
+                  partly: 'Teilweise',
+                  reject: 'Ablehnung',
+                  skip: 'Keine Position',
+                },
+              },
+              'hybrid': {
+                options: {
+                  'strongly-approve': 'Starke Zustimmung',
+                  approve: 'Zustimmung',
+                  neutral: 'Neutral',
+                  reject: 'Ablehnung',
+                  'strongly-reject': 'Starke Ablehnung',
+                  skip: 'Keine Position',
+                },
+              },
+            },
           },
           explanation: {
             name: 'Antwort der {short} ({name})'

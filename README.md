@@ -11,7 +11,7 @@ footer: GPL-3.0 Licensed | Copyright © 2019-present Till Sanders
 </div>
 
 ::: warning PROJECT STATUS
-This project is currently under heavy development. Version 0.1.0 will be released in Q3 2020 and
+This project is currently under heavy development. Version 1.0.0 will be released in Q3 2020 and
 will be the first to be production ready. Sign up for our [newsletter](http://eepurl.com/gRApTD) to
 stay in the loop.
 :::
@@ -37,6 +37,10 @@ stay in the loop.
   <div class="feature">
     <h2>Multilingual</h2>
     <p>Provide the same election compass in multiple languages to engage a bigger audience.</p>
+  </div>
+  <div class="feature">
+    <h2>Multiple algorithms</h2>
+    <p>Choose your matching algorithm and answer style – three buttons or maybe five?</p>
   </div>
   <div class="feature">
     <h2>Community</h2>
@@ -86,10 +90,6 @@ thing is certain – we're not done yet. Take a look:
   <div class="feature">
     <h2>Zero-Cookie Analytics</h2>
     <p>Let people donate their answers for scientific research and statistics.</p>
-  </div>
-  <div class="feature">
-    <h2>More answer styles</h2>
-    <p>Some research suggests, that five possible answers instead of three can yield better results.</p>
   </div>
   <div class="feature">
     <h2>Peer-to-Peer sessions</h2>

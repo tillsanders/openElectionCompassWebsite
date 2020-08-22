@@ -26,26 +26,33 @@ Konfigurationsdatei leicht bestimmt werden kann, gibt es ein entsprechendes Attr
 
 Im Laufe der Zeit wurden verschiedene Algorithmen und Antwort-Stile entwickelt. Da der
 OpenElectionCompass entwickelt wurde um das Verhalten der populärsten Voting Advice Application
-Deutschlands zu imitieren, besteht der Standard-Stil (und der einzige aktuell verfügbare) aus drei
-Buttons und dem sogenannten Cityblock-Algorithmus.
+Deutschlands zu imitieren, besteht der Standard-Stil aus drei Buttons und dem sogenannten
+Cityblock-Algorithmus.
 
 ### Verfügbare Algorithmen und Antwort-Stile
 
-- `cityblock/accept-neutral-reject`:
+- `cityblock/approve-neutral-reject`:
   - Standard
   - Buttons: 3 – Zustimmen, Neutral, Ablehnen
   - Übereinstimmung/Algorithmus: Cityblock
-- `cityblock/accept-partly-reject`:
+  - [Demo](https://open-election-compass.github.io/client/index.html)
+- `cityblock/approve-partly-reject`:
   - Funktioniert genau so, wie der vorherige, allerdings ist der Neutral-Button mit 'Teilweise' beschriftet.
   - Buttons: 3 – Zustimmen, Teilweise, Ablehnen
   - Übereinstimmung/Algorithmus: Cityblock
+  - [Demo](https://open-election-compass.github.io/client/demo-luedenscheid.html)
+- `hybrid`:
+  - Liefert genauere Ergebnisse, da mehr Antwortmöglichkeiten zur Verfügung stehen und in der Auswertung die Richtung stärker berücksichtigt wird.
+  - Buttons: 5 – Starke Zustimmung, Zustimmung, Neutral, Ablehnung, Starke Ablehnung
+  - Übereinstimmung/Algorithmus: Hybrid
+  - [Demo](https://open-election-compass.github.io/client/demo-hybrid.html)
 
 ### Konfigurationsbeispiel
 
 ```json
 {
   "version": "1",
-  "algorithm": "cityblock/accept-neutral-reject"
+  "algorithm": "cityblock/approve-neutral-reject"
 }
 ```
 
