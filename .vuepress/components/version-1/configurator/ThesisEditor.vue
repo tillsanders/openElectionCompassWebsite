@@ -99,7 +99,7 @@ export default {
       } else if (this.store.algorithm === 'cityblock/approve-partly-reject') {
         return [
           { value: 'approve', name: this.$t('fields.position.algorithms.cityblock-approve-partly-reject.options.approve') },
-          { value: 'neutral', name: this.$t('fields.position.algorithms.cityblock-approve-partly-reject.options.partly') },
+          { value: 'partly', name: this.$t('fields.position.algorithms.cityblock-approve-partly-reject.options.partly') },
           { value: 'reject', name: this.$t('fields.position.algorithms.cityblock-approve-partly-reject.options.reject') },
           { value: 'skip', name: this.$t('fields.position.algorithms.cityblock-approve-partly-reject.options.skip') },
         ];
