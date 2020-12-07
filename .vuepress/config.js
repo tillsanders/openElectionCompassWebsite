@@ -81,11 +81,13 @@ module.exports = {
               },
             ]
           },
+          { text: 'Donate', link: 'https://opencollective.com/openelectioncompass' },
           {
             text: 'About',
             items: [
               { text: 'Contact (German)', link: '/about' },
               { text: 'Privacy Policy (German)', link: '/privacy' },
+              { text: 'Visitor Statistics', link: 'https://plausible.io/open-election-compass.com' }
             ]
           },
         ],
@@ -178,11 +180,13 @@ module.exports = {
               },
             ]
           },
+          { text: 'Spenden', link: 'https://opencollective.com/openelectioncompass' },
           {
             text: 'Über',
             items: [
               { text: 'Impressum', link: '/about' },
               { text: 'Datenschutzerklärung', link: '/privacy' },
+              { text: 'Besucherzahlen', link: 'https://plausible.io/open-election-compass.com' }
             ]
           },
         ],
