@@ -17,7 +17,7 @@ Corneliusstraße 5<br />
 58511 Lüdenscheid<br />
 Germany</p>
 
-<p>Telefon: [Telefonnummer der verantwortlichen Stelle]<br />
+<p>Telefon: 015678 524995<br />
 E-Mail: mail@till-sanders.de</p>
  <p>Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.</p>
 
