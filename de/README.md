@@ -110,6 +110,10 @@ Version 1.0.0 befindet sich noch in der Entwicklung und automatisierte Tests sin
       werden automatisch beendet.
     </p>
   </div>
+  <div class="feature">
+    <h2><a href="https://www.npmjs.com/package/@open-election-compass/client">Nuxt.js Plugin</a></h2>
+    <p>Bette deinen Wahlkompass leicht in deine Nuxt.js Website ein und profitiere von SSR.</p>
+  </div>
 </div>
 
 ## Roadmap :seedling:
@@ -138,10 +142,6 @@ in Planung. Aber eines ist sicher – wir sind noch lange nicht fertig:
       Ein leichtgewichtiges Wordpress Plugin für eine noch einfachere Installation für
       Nicht-Programmierer:innen.
     </p>
-  </div>
-  <div class="feature">
-    <h2>Nuxt.js Plugin</h2>
-    <p>Bette deinen Wahlkompass leicht in deine Nuxt.js Website ein und profitiere von SSR.</p>
   </div>
   <div class="feature">
     <h2>Marketing Vorlagen</h2>

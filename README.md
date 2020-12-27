@@ -76,6 +76,10 @@ Version 1.0.0 is still under development and coverage of automated tests is not 
     <h2>Kiosk Mode</h2>
     <p>Use the Kiosk mode to set up a terminal in a public place. Sessions will be destroyed automatically.</p>
   </div>
+  <div class="feature">
+    <h2><a href="https://www.npmjs.com/package/@open-election-compass/client">Nuxt.js plugin</a></h2>
+    <p>Easily embed an election compass into your Nuxt.js website and make full use of SSR.</p>
+  </div>
 </div>
 
 ## Roadmap :seedling:
@@ -96,10 +100,6 @@ thing is certain – we're not done yet. Take a look:
   <div class="feature">
     <h2>Wordpress plugin</h2>
     <p>A lightweight wrapper for Wordpress will make deployment even simpler for non-developers.</p>
-  </div>
-  <div class="feature">
-    <h2>Nuxt.js plugin</h2>
-    <p>Easily embed an election compass into your Nuxt.js website and make full use of SSR.</p>
   </div>
   <div class="feature">
     <h2>Marketing Templates</h2>
