@@ -10,6 +10,14 @@ footer: 'Lizenz: GPL 3.0 | Copyright © 2019-present Till Sanders'
   <Bit/>
 </div>
 
+::: tip Schau jetzt den Vortrag 'Patching Democracy'! (Englisch)
+2020 war ein großartiges Jahr für dieses Projekt. Wir freuen uns sowohl über den ersten großen
+Einsatz in Nordrhein-Westfalen mit über 120.000 Besuchen, als auch über die Einladung einen Vortrag
+auf der [Remote Chaos Experience](https://rc3.world/rc3/event/rc3-40403-patching_democracy/) zu
+halten. Du findest den Vortrag 'Patching Democracy' hier in voller Länge:
+<https://www.youtube.com/watch?v=UGkGsCpC5M8>
+:::
+
 ::: warning PROJEKT STATUS
 Version 1.0.0 befindet sich noch in der Entwicklung und automatisierte Tests sind noch nicht vollständig. Das Projekt kann dennoch bereits produktiv eingesetzt werden. Melde dich für unseren
 [Newsletter](http://eepurl.com/gRApTD) an um auf dem Laufenden zu bleiben.

@@ -10,6 +10,13 @@ footer: GPL-3.0 Licensed | Copyright © 2019-present Till Sanders
   <Bit/>
 </div>
 
+::: tip Watch the talk 'Patching Democracy' now!
+2020 was a great year for the project. Not only did we see the first big installment in
+Northrhine-Westphalia with over 120,000 users, but we were also invited to hold a lecture at the
+[Remote Chaos Experience](https://rc3.world/rc3/event/rc3-40403-patching_democracy/). You can find
+the talk 'Patching Democracy' here in full length: <https://www.youtube.com/watch?v=UGkGsCpC5M8>
+:::
+
 ::: warning PROJECT STATUS
 Version 1.0.0 is still under development and coverage of automated tests is not complete. It can already be used in production. Sign up for our [newsletter](http://eepurl.com/gRApTD) to stay in the loop.
 :::

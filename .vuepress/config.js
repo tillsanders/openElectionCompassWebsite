@@ -40,6 +40,12 @@ module.exports = {
                   { text: 'Configuration', link: '/guide/technical/configuration.html' },
                 ],
               },
+              {
+                text: 'Talks',
+                items: [
+                  { text: 'Patching Democracy @ RC3', link: 'https://www.youtube.com/watch?v=UGkGsCpC5M8' },
+                ],
+              },
             ],
           },
           {
@@ -137,6 +143,12 @@ module.exports = {
                   { text: 'Übersicht', link: '/de/guide/technical/overview.html' },
                   { text: 'Deployment', link: '/de/guide/technical/deployment.html' },
                   { text: 'Konfiguration', link: '/de/guide/technical/configuration.html' },
+                ],
+              },
+              {
+                text: 'Vorträge',
+                items: [
+                  { text: 'Patching Democracy @ RC3 (EN)', link: 'https://www.youtube.com/watch?v=UGkGsCpC5M8' },
                 ],
               },
             ],

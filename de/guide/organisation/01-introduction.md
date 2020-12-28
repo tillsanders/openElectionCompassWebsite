@@ -8,3 +8,7 @@ durchzuführen, haben wir dieses Handbuch geschrieben. **Mit deinem Feedback wir
 der Zeit wachsen!**
 
 Lese in jedem Fall auch unser [Technisches Handbuch](../technical/overview.html).
+
+**Vortrag**
+
+Du kannst dir außerdem einen Vortrag von der Remote Chaos Experience (2020) zum Thema *Voting Advice Applications* und den OpenElectionCompass mit vielen Hintergrundinformationen anschauen: <https://www.youtube.com/watch?v=UGkGsCpC5M8> (Englisch)
