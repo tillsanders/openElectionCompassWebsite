@@ -19,12 +19,17 @@ Only a few things are left to do:
 
 ## A last request: Please give back to this project!
 
-The Open Election Compass is free to use and open source. At the moment, we are not looking for
-donations, though that might change in the future. You can always help us in simple ways:
+The OpenElectionCompass is free to use and open source and there are many ways you can help our
+mission:
 
 - **Write a blog post for us:** Tell others about it! For example: write a text about your personal
-  experience and send it to us, so we can publish it here. If you can, attach photos.
+  experience and send it to us so we can publish it here. If you can, attach photos.
 - **Feedback:** Did something not work as expected? This can be a technical problem or a
   recommendation in this guide. [Please give us feedback](https://forms.gle/dZ6Hwdp2GGX8s4VeA)!
 - **Technical support:** You happen to be a Web Developer yourself and want to get involved? Please
   do! There are many big and small things that can be improved with your help.
+- **Financial support:** We want the project to grow and this will require a continuous flow of
+  money. While we try to keep everything cost-effective, you can always support us financially.
+  Using the OpenCollective platform, you can make one-time or recurring donations – every amount is
+  greatly appreciated. You can also see how we are spending your money.
+  [Donate now](https://opencollective.com/openelectioncompass)

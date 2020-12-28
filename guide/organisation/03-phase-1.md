@@ -9,5 +9,5 @@ template, but be sure to adapt it to your circumstances.
 - Who is going to manage everything? This person doesn't have to and in fact shouldn't do everything
   alone, but it is very beneficial, to have a single person feeling responsible, that everyone else
   completes their assignments on time.
-- Write down your own timeline. Get a tool to organize your team, like a Trello board or a
-  To-Do-App.
+- Write down your own timeline. Get a tool to organize your team, like a kanban board or a
+  todo app.

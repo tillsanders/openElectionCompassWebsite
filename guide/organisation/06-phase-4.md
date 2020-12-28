@@ -11,7 +11,7 @@ and the most difficult.
 
 To achieve theses of good quality, you should run a workshop with a sample of your audience:
 
-- Gather a group of young and first-time voters (now the teachers in your team will come in handy).
+- Gather a group of young and first-time voters (teachers in your team will come in handy).
 - If you like, you can also gather voters of all ages.
 - Make sure, the group is representable for your audience! No gender, race or religion should be
   excluded!

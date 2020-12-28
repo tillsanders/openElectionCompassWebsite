@@ -1,6 +1,6 @@
 # Phase 8 – Time for a Test
 
-*(6 weeks prior to the election)*
+*(3 - 4 weeks prior to the election)*
 
 By now, you should have everything you need. Let's run a test!
 
@@ -15,6 +15,6 @@ By now, you should have everything you need. Let's run a test!
   to take care of the deployment.
 - Make sure, that your test run is not accessible to the public. Your staging environment should
   only be accessible from certain places or by a complicated URL or even better – a password.
-- You can now take a look at the result. Try it out, give it to your team and the people that
+- You can now take a look at the result. Try it, give it to your team and the people that
   participated in your workshop(s). Gather their feedback.
 - Make small adjustments until everything is ready for the big day!

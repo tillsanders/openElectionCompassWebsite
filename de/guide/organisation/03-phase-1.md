@@ -10,4 +10,4 @@ unsere Zeitleiste als Vorlage verwenden, aber passe sie unbedingt an deine Umst�
   sehr vorteilhaft, wenn sich eine einzelne Person verantwortlich fühlt und dafür Sorge trägt, dass
   alle anderen ihre Aufgaben pünktlich erledigen.
 - Stelle deine eigene Zeitleiste auf. Suche dir ein Tool zur Organisation deines Teams, z. B. ein
-  Trello-Board oder eine To-Do-App.
+  Kanban-Board oder eine To-Do-App.
