@@ -1,13 +1,15 @@
 ---
 home: true
 heroImage: /oec-hero.png
-actionText: Los geht's →
-actionLink: /guide/organisation/01-introduction.html
+actionText: Demo ausprobieren
+actionLink: https://open-election-compass.github.io/client/demo-hybrid.html
 footer: 'Lizenz: GPL 3.0 | Copyright © 2019-present Till Sanders'
 ---
 
 <div style="text-align: center">
   <Bit/>
+  Oder lese unser <a href="/de/guide/organisation/01-introduction.html">Handbuch</a>
+  <br><br>
 </div>
 
 ::: tip Schau jetzt den Vortrag 'Patching Democracy'! (Englisch)
@@ -16,6 +18,10 @@ Einsatz in Nordrhein-Westfalen mit über 120.000 Besuchen, als auch über die Ei
 auf der [Remote Chaos Experience](https://rc3.world/rc3/event/rc3-40403-patching_democracy/) zu
 halten. Du findest den Vortrag 'Patching Democracy' hier in voller Länge:
 <https://www.youtube.com/watch?v=UGkGsCpC5M8>
+
+Außerdem konnten wir das Projekt Anfang 2021 im Rahmen der [FOSDEM'21](https://fosdem.org/2021/) der
+Open Source Community vorstellen. Du findest den Lightning Talk (eine Kurzversion von 'Patching
+Democracy' mit Fokus auf die Software), hier: <https://video.fosdem.org/2021/L.lightningtalks/patching_democracy.webm>
 :::
 
 ::: warning PROJEKT STATUS

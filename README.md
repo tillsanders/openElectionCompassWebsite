@@ -1,20 +1,26 @@
 ---
 home: true
 heroImage: /oec-hero.png
-actionText: Get Started →
-actionLink: /guide/organisation/01-introduction.html
+actionText: Try the Demo
+actionLink: https://open-election-compass.github.io/client/demo-hybrid.html
 footer: GPL-3.0 Licensed | Copyright © 2019-present Till Sanders
 ---
 
 <div style="text-align: center">
   <Bit/>
+  Or learn how to <a href="/guide/organisation/01-introduction.html">get started</a>
+  <br><br>
 </div>
 
 ::: tip Watch the talk 'Patching Democracy' now!
 2020 was a great year for the project. Not only did we see the first big installment in
-Northrhine-Westphalia with over 120,000 users, but we were also invited to hold a lecture at the
-[Remote Chaos Experience](https://rc3.world/rc3/event/rc3-40403-patching_democracy/). You can find
-the talk 'Patching Democracy' here in full length: <https://www.youtube.com/watch?v=UGkGsCpC5M8>
+Northrhine-Westphalia with over 120,000 users, and on top of that were also invited to hold a
+lecture at the [Remote Chaos Experience](https://rc3.world/rc3/event/rc3-40403-patching_democracy/).
+You can find the talk 'Patching Democracy' here in full length: <https://www.youtube.com/watch?v=UGkGsCpC5M8>
+
+Furthermore in the beginning of 2021 we introduced the project to the open source community at
+[FOSDEM'21](https://fosdem.org/2021/). Watch the lightning talk (a shorter version of 'Patching
+Democracy' focusing on the software) here: <https://video.fosdem.org/2021/L.lightningtalks/patching_democracy.webm>
 :::
 
 ::: warning PROJECT STATUS
