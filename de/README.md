@@ -128,6 +128,12 @@ Version 1.0.0 befindet sich noch in der Entwicklung und automatisierte Tests sin
     <h2><a href="https://www.npmjs.com/package/@open-election-compass/client">Nuxt.js Plugin</a></h2>
     <p>Bette deinen Wahlkompass leicht in deine Nuxt.js Website ein und profitiere von SSR.</p>
   </div>
+  <div class="feature">
+    <h2>Null-Cookie Analyse</h2>
+    <p>
+      Benutzer:innen spenden ihre Antworten zur wissenschaftlichen und statistischen Auswertung.
+    </p>
+  </div>
 </div>
 
 ## Roadmap :seedling:
@@ -138,23 +144,10 @@ in Planung. Aber eines ist sicher – wir sind noch lange nicht fertig:
 
 <div class="features">
   <div class="feature">
-    <h2>Null-Cookie Analyse</h2>
-    <p>
-      Benutzer:innen spenden ihre Antworten zur wissenschaftlichen und statistischen Auswertung.
-    </p>
-  </div>
-  <div class="feature">
     <h2>Peer-to-Peer Sitzungen</h2>
     <p>
       Lade deine Freunde zu einer gemeinsamen Sitzung ein, vergleicht eure Antworten und startet
       eine Diskussion.
-    </p>
-  </div>
-  <div class="feature">
-    <h2>Wordpress Plugin</h2>
-    <p>
-      Ein leichtgewichtiges Wordpress Plugin für eine noch einfachere Installation für
-      Nicht-Programmierer:innen.
     </p>
   </div>
   <div class="feature">

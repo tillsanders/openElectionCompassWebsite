@@ -135,7 +135,7 @@ Example: `"This election compass is provided by your local democracy support gro
 Below the start section is a short introduction section that starts with a heading. Use about 3 to 5
 welcoming words.
 
-Beispiel: `"Welcome to the Election Compass"`
+Example: `"Welcome to the Election Compass"`
 
 ### introduction.text <Badge text="mehrsprachig"/>
 
@@ -143,7 +143,7 @@ Provide a short introduction to your election compass. Don\'t add explanations o
 rather tell your audience, who you are and why you are doing this, how many parties participated,
 etc. About 2 - 5 sentences.
 
-Beispiel: `"All 9 parties that are participating in the election have ..."`
+Example: `"All 9 parties that are participating in the election have ..."`
 
 ## Parties
 
@@ -307,6 +307,139 @@ Possible values:
 The parties explanation regarding their position.
 
 Example: `"If all of this comes off as mixed-up to you, that's because it is! ..."`
+
+## Analysis
+
+For scientific purposes, the OpenElectionCompass supports collecting statistical data through an
+opt-in tool. When the results are presented, a small window will nicely ask users to donate their
+data – anonymously – to science. With the click of a button, the data is transmitted to a backend
+for storage.
+
+- Answers given, including the factor (the important setting)
+- The results for every party, including the state of selection
+
+Additionally, users can answer more questions to further qualify the dataset. Whenever they answer
+another question, an updated dataset will be sent to the backend. That way, users don't have to
+answer all questions.
+
+- Age
+- Gender
+- Education
+- Voting intention
+
+This catalogue of questions can be adapted to your needs. Though at the moment you'll need a
+developer to do that as there is no configuration support, yet. In the meantime, you can also
+provide a link to a follow-up questionnaire. After all of the above questions are answered, users
+can follow the link to your custom questionnaire to provide even more insight.
+
+::: warning A word of caution
+This feature is intended to support science. Other institutions, like the
+media or political parties, should not take advantage of this. Furthermore, this feature was
+intentionally designed to put the user's privacy first. It is strictly opt-in only, users can stop
+answering at any point and their data is anonymous and can, by default, not be traced back to them.
+If you want to collect names, e-mail adresses, et cetera, please do so in the follow-up
+questionnaire and state explicitly, that you will be able to connect their name to their answers.
+Please use with respect and responsibility.
+:::
+
+```json
+  // version, languages, title, parties, theses, etc.
+  // ...
+  "analysis": {
+    "endpoint": "https://example.com/data/luedenscheid",
+    "institution": {
+      "de": "Universität Münster",
+      "en": "University Münster"
+    },
+    "survey": {
+      "de": "http://example.com/survey/de",
+      "en": "http://example.com/survey/en"
+    }
+  },
+```
+
+### analysis.endpoint
+
+This is the route, all datasets will be send to. You'll need a server listening to incoming data and
+a database. A request will look like this:
+
+```json
+POST https://example.com/data/luedenscheid
+
+{
+  "signature": "qQu1Pr3cTzpK1HzMox-Iv",
+  "data": {
+    "answers": [{
+      "answer": "approve",
+      "factor": 1
+    }, {
+      "answer": "reject",
+      "factor": 1
+    }, {
+      "answer": "strongly-reject",
+      "factor": 1
+    }, {
+      "answer": "skip",
+      "factor": 1
+    }, {
+      "answer": "strongly-approve",
+      "factor": 1
+    }, {
+      "answer": "approve",
+      "factor": 2
+    }, {
+      "answer": "neutral",
+      "factor": 1
+    }],
+    "parties": [{
+      "alias": "spew",
+      "selected": true,
+      "result": 0.7857142857142857
+    }, {
+      "alias": "snape",
+      "selected": true,
+      "result": 0.46428571428571425
+    }, {
+      "alias": "qlp",
+      "selected": false,
+      "result": 0.17857142857142855
+    }, {
+      "alias": "fun",
+      "selected": true,
+      "result": 0.6785714285714285
+    }, {
+      "alias": "fff",
+      "selected": false,
+      "result": 0.3571428571428571
+    }],
+    "analysis": {
+      "age": "27",
+      "gender": "male",
+      "education": "higher",
+      "party": "snape"
+    }
+  }
+}
+```
+
+The signature is a [nanoid](https://github.com/ai/nanoid) that is generated whith every pageview.
+You can use it to identify the user on the server-side to update existing datasets.
+
+The rest of the structure should be self-explanatory.
+
+Example: `"https://example.com/data/luedenscheid"`
+
+### analysis.institution <Badge text="multilingual"/>
+
+This contains the name of your institution / university / research group.
+
+Example: `"University Münster"`
+
+### analysis.survey <Badge text="multilingual"/>
+
+Use this option to provide a follow-up questionnaire for user's that answered all other questions.
+
+Example: `"http://example.com/survey/de"`
 
 ## Links
 

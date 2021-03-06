@@ -14,7 +14,7 @@ footer: GPL-3.0 Licensed | Copyright © 2019-present Till Sanders
 
 ::: tip Watch the talk 'Patching Democracy' now!
 2020 was a great year for the project. Not only did we see the first big installment in
-Northrhine-Westphalia with over 120,000 users, and on top of that were also invited to hold a
+Northrhine-Westphalia with over 120,000 users, but on top of that were also invited to hold a
 lecture at the [Remote Chaos Experience](https://rc3.world/rc3/event/rc3-40403-patching_democracy/).
 You can find the talk 'Patching Democracy' here in full length: <https://www.youtube.com/watch?v=UGkGsCpC5M8>
 
@@ -93,6 +93,10 @@ Version 1.0.0 is still under development and coverage of automated tests is not 
     <h2><a href="https://www.npmjs.com/package/@open-election-compass/client">Nuxt.js plugin</a></h2>
     <p>Easily embed an election compass into your Nuxt.js website and make full use of SSR.</p>
   </div>
+  <div class="feature">
+    <h2>Zero-Cookie Analysis</h2>
+    <p>Let people donate their answers for scientific research and statistics.</p>
+  </div>
 </div>
 
 ## Roadmap :seedling:
@@ -103,16 +107,8 @@ thing is certain – we're not done yet. Take a look:
 
 <div class="features">
   <div class="feature">
-    <h2>Zero-Cookie Analytics</h2>
-    <p>Let people donate their answers for scientific research and statistics.</p>
-  </div>
-  <div class="feature">
     <h2>Peer-to-Peer sessions</h2>
     <p>Invite your friends to a shared session, see their positions and start a discussion.</p>
-  </div>
-  <div class="feature">
-    <h2>Wordpress plugin</h2>
-    <p>A lightweight wrapper for Wordpress will make deployment even simpler for non-developers.</p>
   </div>
   <div class="feature">
     <h2>Marketing Templates</h2>

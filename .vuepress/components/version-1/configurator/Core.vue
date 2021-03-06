@@ -5,6 +5,7 @@
     <GeneralInformation :store="store" />
     <Parties :store="store" />
     <Theses :store="store" />
+    <Analysis :store="store" />
     <Links :store="store" />
     <hr>
     <DownloadButton :store="store" />
@@ -20,6 +21,7 @@ import Languages from './Languages.vue';
 import GeneralInformation from './GeneralInformation.vue';
 import Parties from './Parties.vue';
 import Theses from './Theses.vue';
+import Analysis from './Analysis.vue';
 import Links from './Links.vue';
 import DownloadButton from './DownloadButton.vue';
 import StorageButtons from './StorageButtons.vue';
@@ -45,6 +47,11 @@ export default {
         },
         parties: [],
         theses: [],
+        analysis: {
+          endpoint: null,
+          survey: {},
+          institution: {},
+        },
         links: [],
       },
     };
@@ -54,6 +61,7 @@ export default {
     GeneralInformation,
     Parties,
     Theses,
+    Analysis,
     Links,
     DownloadButton,
     StorageButtons,
@@ -71,6 +79,11 @@ export default {
         },
         parties: [],
         theses: [],
+        analysis: {
+          endpoint: null,
+          survey: {},
+          institution: {},
+        },
         links: [],
       });
     },

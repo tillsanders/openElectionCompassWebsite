@@ -93,6 +93,11 @@ export default {
           positions,
         };
       });
+      configuration.analysis = {
+        endpoint: store.analysis.endpoint || null,
+        institution: store.analysis.institution ? this.keyTranslationsByLanguageCode(store.languages, store.analysis.institution) : null,
+        survey: store.analysis.survey ? this.keyTranslationsByLanguageCode(store.languages, store.analysis.survey) : null,
+      };
       configuration['footer-links'] = store.links.map(link => {
         return {
           text: this.keyTranslationsByLanguageCode(store.languages, link.text),

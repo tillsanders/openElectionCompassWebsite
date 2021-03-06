@@ -44,6 +44,7 @@ module.exports = {
                 text: 'Talks',
                 items: [
                   { text: 'Patching Democracy @ RC3', link: 'https://www.youtube.com/watch?v=UGkGsCpC5M8' },
+                  { text: 'Patching Democracy @ FOSDEM\'21', link: 'https://video.fosdem.org/2021/L.lightningtalks/patching_democracy.webm' },
                 ],
               },
             ],
@@ -149,6 +150,7 @@ module.exports = {
                 text: 'Vorträge',
                 items: [
                   { text: 'Patching Democracy @ RC3 (EN)', link: 'https://www.youtube.com/watch?v=UGkGsCpC5M8' },
+                  { text: 'Patching Democracy @ FOSDEM\'21 (EN)', link: 'https://video.fosdem.org/2021/L.lightningtalks/patching_democracy.webm' },
                 ],
               },
             ],

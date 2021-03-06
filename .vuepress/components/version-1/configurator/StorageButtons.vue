@@ -118,6 +118,11 @@ export default {
             positions,
           });
         });
+        if (configuration.analysis) {
+          this.store.analysis.endpoint = configuration.analysis.endpoint;
+          this.store.analysis.institution = this.keyTranslationsByLanguageUuid(this.store.languages, configuration.analysis.institution);
+          this.store.analysis.survey = this.keyTranslationsByLanguageUuid(this.store.languages, configuration.analysis.survey);
+        }
         if (Array.isArray(configuration['footer-links'])) {
           configuration['footer-links'].forEach((link) => {
             this.store.links.push({

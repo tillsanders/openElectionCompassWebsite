@@ -121,14 +121,14 @@ export default {
   i18n: {
     messages: {
       'en-US': {
-        title: '5. Links',
+        title: '6. Links',
         explanation: 'You can display links in the footer and at the bottom of the navigation to link to your home page, privacy policy, about page etc.',
         edit: 'Edit',
         remove: 'Remove',
         add: 'Add link'
       },
       'de-DE': {
-        title: '5. Links',
+        title: '6. Links',
         explanation: 'Im Fußbereich, sowie am Ende der Navigation können Links zu deiner Startseite, Datenschutzerklärung, Impressum etc. angezeigt werden.',
         edit: 'Bearbeiten',
         remove: 'Löschen',

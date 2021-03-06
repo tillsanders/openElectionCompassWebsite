@@ -310,6 +310,143 @@ Die Antwort der Partei zu dieser These.
 
 Beispiel: `"Wenn all dies für dich durcheinander erscheint, liegt das daran, dass es so ist! ..."`
 
+## Analyse
+
+Für wissenschaftliche Zwecke unterstützt der OpenElectionCompass das Erheben statistischer Daten
+über ein Opt-In-Tool. Wenn die Ergebnisse präsentiert werden, werden Besucher:innen in einem kleinen
+Fenster aufgefordert, ihre Ergebnisse - anonym - an die Wissenschaft zu spenden. Mit einem Klick
+werden die Daten an ein Backend übertragen.
+
+- Antworten der Besucher:innen, inklusive Faktor (die Wichtig-Einstellung)
+- Punktzahl aller Parteien, inklusive Auswahl
+
+Darüber hinaus können Besucher:innen weitere Fragen beantworten, um den Datensatz weiter zu
+qualifizieren. Wann immer sie eine Frage beantworte, wird ein aktualisierter Datensatz an das
+Backend gesendet. Auf diese Weise müssen Besucher:innen nicht alle Fragen beantworten.
+
+- Alter
+- Geschlecht
+- Bildungsstand
+- Wahlabsicht
+
+Dieser Fragenkatalog kann an deine Anforderungen angepasst werden. Im Moment benötigst du dazu
+jedoch eine:n Entwickler:in, da dies noch nicht über die Konfiguration möglich ist. In der
+Zwischenzeit kannst du auch einen Link zu einem Folgefragebogen bereitstellen. Nachdem alle oben
+genannten Fragen beantwortet wurden, können Besucher:innen diesem Link zu deinem benutzerdefinierten
+Fragebogen folgen, um noch mehr Einblicke zu gewähren.
+
+::: warning Ein Wort der Warnung
+Diese Funktion soll die Wissenschaft unterstützen. Andere Institutionen,
+wie die Medien oder politische Parteien, sollten dies nicht nutzen. Darüber hinaus wurde diese
+Funktion so entworfen, dass sie die Privatsphäre der Besucher:innen in den Vordergrund stellt. Die
+Analyse ist ausschließlich Opt-In, Besucher:innen beantworten nur so viele Fragen wie sie möchten
+und ihre Datensätze sind anonym und lassen sich standardmäßig nicht ihrer Person zuordnen. Wenn du
+Namen, E-Mail-Adressen usw. sammeln möchtest, dann tue dies bitte im Folgefragebogen und gib dabei
+ausdrücklich zu verstehen, dass du die Namen der Besucher:innen mit deren Antworten verknüpfen
+kannst. Bitte verwende diese Funktion mit Respekt und Verantwortung.
+:::
+
+```json
+  // version, languages, title, parties, theses, etc.
+  // ...
+  "analysis": {
+    "endpoint": "https://example.com/data/luedenscheid",
+    "institution": {
+      "de": "Universität Münster",
+      "en": "University Münster"
+    },
+    "survey": {
+      "de": "http://example.com/survey/de",
+      "en": "http://example.com/survey/en"
+    }
+  },
+```
+
+### analysis.endpoint
+
+Dies ist die Adresse an die die Datensätze gesendet werden. Du benötigst einen Server, der die
+eingehenden Daten empfängt und in einer Datenbank persistiert. So sieht eine solche Anfrage aus:
+
+```json
+POST https://example.com/data/luedenscheid
+
+{
+  "signature": "qQu1Pr3cTzpK1HzMox-Iv",
+  "data": {
+    "answers": [{
+      "answer": "approve",
+      "factor": 1
+    }, {
+      "answer": "reject",
+      "factor": 1
+    }, {
+      "answer": "strongly-reject",
+      "factor": 1
+    }, {
+      "answer": "skip",
+      "factor": 1
+    }, {
+      "answer": "strongly-approve",
+      "factor": 1
+    }, {
+      "answer": "approve",
+      "factor": 2
+    }, {
+      "answer": "neutral",
+      "factor": 1
+    }],
+    "parties": [{
+      "alias": "spew",
+      "selected": true,
+      "result": 0.7857142857142857
+    }, {
+      "alias": "snape",
+      "selected": true,
+      "result": 0.46428571428571425
+    }, {
+      "alias": "qlp",
+      "selected": false,
+      "result": 0.17857142857142855
+    }, {
+      "alias": "fun",
+      "selected": true,
+      "result": 0.6785714285714285
+    }, {
+      "alias": "fff",
+      "selected": false,
+      "result": 0.3571428571428571
+    }],
+    "analysis": {
+      "age": "27",
+      "gender": "male",
+      "education": "higher",
+      "party": "snape"
+    }
+  }
+}
+```
+
+Die Signatur ist eine [nanoid](https://github.com/ai/nanoid) welche mit jedem Seitenaufruf erzeugt
+wird. Du kannst sie nutzen um die Besucher:innen serverseitig zu identifizieren und ihre Datensätze
+zu aktualisieren.
+
+Die restliche Struktur sollte selbsterklärend sein.
+
+Beispiel: `"https://example.com/data/luedenscheid"`
+
+### analysis.institution <Badge text="mehrsprachig"/>
+
+Enthält den Namen deiner Institution / Universität / Forschungsgruppe.
+
+Beispiel: `"Universität Münster"`
+
+### analysis.survey <Badge text="mehrsprachig"/>
+
+Nutze diese Option um einen Folgefragebogen bereitzustellen für Besucher:innen, die alle übrigen
+Fragen beantwortet haben.
+
+Beispiel: `"http://example.com/survey/de"`
+
 ## Links
 
 Das optionale `footer-links` Attribut auf der obersten Ebene enthält eine Liste (Array) an Links.
