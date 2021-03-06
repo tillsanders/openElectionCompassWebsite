@@ -55,7 +55,7 @@ Version 1.0.0 is still under development and coverage of automated tests is not 
   </div>
   <div class="feature">
     <h2>Community</h2>
-    <p>You're not alone! We're building a helpful community here. Join us on <a href="https://spectrum.chat/openelectioncompass" rel="noindex,nofollow">Spectre.chat</a></p>
+    <p>You're not alone! We're building a helpful community here. Join us on <a href="https://github.com/open-election-compass/client/discussions" rel="noindex,nofollow">GitHub Discussions</a></p>
   </div>
   <div class="feature">
     <h2>Helpful Guides</h2>

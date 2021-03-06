@@ -70,7 +70,7 @@ Version 1.0.0 befindet sich noch in der Entwicklung und automatisierte Tests sin
     <h2>Gemeinschaft</h2>
     <p>
       Du bist nicht alleine! Wir bauen eine helfende Gemeinschaft auf! Komm dazu auf
-      <a href="https://spectrum.chat/openelectioncompass" rel="noindex,nofollow">Spectre.chat</a>
+      <a href="https://github.com/open-election-compass/client/discussions" rel="noindex,nofollow">GitHub Discussions</a>
     </p>
   </div>
   <div class="feature">
