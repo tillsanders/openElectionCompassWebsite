@@ -13,7 +13,7 @@ About a month before the election, you should publish your election compass.
   - your other partners
   - friends and family
 
-# Tipps
+# Tips
 
 ## The right moment
 

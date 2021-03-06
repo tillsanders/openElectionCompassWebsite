@@ -19,7 +19,7 @@ supporters.
 - Establish your organization tools and communication channels.
 - Get everyone to work, gather todos and assign them, set deadlines.
 
-## Tipps
+## Tips
 
 ### I don't know people suitable for these positions
 

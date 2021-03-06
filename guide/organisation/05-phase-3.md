@@ -24,7 +24,7 @@ missing (one or two small parties might be tolerable).
 - One day after the meeting, send them the most important information and thank them for
   participating.
 
-## Tipps
+## Tips
 
 ### A small party doesn't want to participate
 

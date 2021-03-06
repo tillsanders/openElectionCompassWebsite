@@ -13,7 +13,7 @@ voters. In this workshop, you will work out a number of theses.
   coffee.
 - Collect all theses in a list and don't forget to work on the wording.
 
-## Tipps
+## Tips
 
 ### What makes a good thesis?
 
