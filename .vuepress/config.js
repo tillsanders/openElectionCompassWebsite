@@ -84,6 +84,7 @@ module.exports = {
                 text: 'Archive',
                 items: [
                   { text: '2020', link: '/archive/2020' },
+                  { text: '2021', link: '/archive/2021' },
                 ],
               },
             ]
@@ -190,6 +191,7 @@ module.exports = {
                 text: 'Archiv',
                 items: [
                   { text: '2020', link: '/archive/2020' },
+                  { text: '2021', link: '/archive/2021' },
                 ],
               },
             ]
