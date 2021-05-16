@@ -12,6 +12,18 @@ footer: GPL-3.0 Licensed | Copyright © 2019-present Till Sanders
   <br><br>
 </div>
 
+::: tip Bevorstehender Workshop – entwickelt mit uns eigene Thesen für einen Wahlkompass! (German)
+
+Du bist in der Jugendarbeit tätig und planst einen Wahlkompass mit Jugendlichen durchzuführen oder
+bist allgemein an dem Thema interessiert? Dann kannst du hier die bewährte Methode eines Workshops
+zur Entwicklung eigener Wahlkompass-Thesen selbst erleben. Wir berichten über die Methode und geben
+dir den Raum einmal eigene Thesen zu entwickeln.
+
+<a href="/de/republica-21.html">Mehr erfahren</a>
+:::
+
+[![In the meantime.](./de/in-the-meantime.jpg)](/de/republica-21.html)
+
 ::: tip Watch the talk 'Patching Democracy' now!
 2020 was a great year for the project. Not only did we see the first big installment in
 Northrhine-Westphalia with over 120,000 users, but on top of that were also invited to hold a
