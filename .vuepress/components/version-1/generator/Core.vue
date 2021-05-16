@@ -87,7 +87,7 @@
 
 <script>
 import * as Eta from 'eta';
-import uuid from 'uuid/v1';
+import { v1 as uuid } from 'uuid';
 import { localize, ValidationObserver } from 'vee-validate';
 import de from 'vee-validate/dist/locale/de.json';
 import en from 'vee-validate/dist/locale/en.json';

@@ -4,14 +4,14 @@
   "description": "Website and documentation for the openElectionCompass project.",
   "main": "index.js",
   "dependencies": {
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
-    "@fortawesome/vue-fontawesome": "^0.1.9",
+    "@fortawesome/vue-fontawesome": "^2.0.2",
     "eta": "^1.1.1",
     "husky": "^3.1.0",
-    "uuid": "^3.4.0",
+    "uuid": "^8.3.2",
     "vee-validate": "^3.2.5",
     "vue-i18n": "^8.17.7",
     "vue-plausible": "^1.0.0",
@@ -19,6 +19,7 @@
   },
   "scripts": {
     "dev": "vuepress dev",
+    "build": "vuepress build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -39,6 +40,6 @@
   "devDependencies": {
     "raw-loader": "^4.0.1",
     "url-loader": "^4.1.0",
-    "vuepress": "1.4.1"
+    "vuepress": "^1.8.2"
   }
 }

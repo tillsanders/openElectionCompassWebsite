@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import uuid from 'uuid/v1';
+import { v1 as uuid } from 'uuid';
 import _forEach from 'lodash/forEach';
 
 export default {

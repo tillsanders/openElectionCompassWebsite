@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import uuid from 'uuid/v1';
+import { v1 as uuid } from 'uuid';
 import _filter from 'lodash/filter';
 import { SlickList, SlickItem, HandleDirective } from 'vue-slicksort';
 import LinkEditor from './LinkEditor.vue';

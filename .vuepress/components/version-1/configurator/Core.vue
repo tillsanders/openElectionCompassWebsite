@@ -14,7 +14,7 @@
 
 <script>
 import { localize } from 'vee-validate';
-import uuid from 'uuid/v1';
+import { v1 as uuid } from 'uuid';
 import de from 'vee-validate/dist/locale/de.json';
 import en from 'vee-validate/dist/locale/en.json';
 import Languages from './Languages.vue';

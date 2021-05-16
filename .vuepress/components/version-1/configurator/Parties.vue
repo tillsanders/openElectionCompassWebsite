@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import uuid from 'uuid/v1';
+import { v1 as uuid } from 'uuid';
 import { SlickList, SlickItem, HandleDirective } from 'vue-slicksort';
 import PartyEditor from './PartyEditor.vue';
 
