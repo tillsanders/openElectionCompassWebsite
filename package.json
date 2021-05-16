@@ -38,6 +38,7 @@
     }
   },
   "devDependencies": {
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
     "raw-loader": "^4.0.1",
     "url-loader": "^4.1.0",
     "vuepress": "^1.8.2"
