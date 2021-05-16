@@ -16,8 +16,8 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Build
-      run: npm i && npm i vuepress && npx vuepress build
-        
+      run: npm i && npx vuepress build
+
     - name: Deploy VuePress website to GitHub Pages
       if: success()
       uses: crazy-max/ghaction-github-pages@v1.3.0
